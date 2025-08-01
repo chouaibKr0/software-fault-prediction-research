@@ -1,0 +1,10 @@
+# Project metadata
+project_name: "Software Fault Prediction"
+project_description: "A research project focused on hyperparameter optimization of machine learning models using metaheuristics."
+
+# Seed
+random_seed: 42
+random_state: 42
+
+# Paths
+data_path: "data/"

@@ -1,0 +1,2 @@
+# current data config
+local_data_path: "" # eg full_data_path = data_path/local_data_path 

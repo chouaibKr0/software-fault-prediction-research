@@ -1,0 +1,25 @@
+# Missing Values
+missing_values:
+  strategy: "median"
+
+# Dimensionality Reduction
+feature_selection:
+  enabled: true
+  method: "literature_based"
+  
+  # Minimum feature set based on literature
+  #selected_features: [
+  #  "wmc", "max_cc", "loc", "cbo", "lcom"
+  #]
+
+  selected_features: [
+    "wmc", "max_cc", "loc", "cbo", "lcom", "rfc", "ca", "ce", "noc", "lcom3"
+  ]
+
+# Scaling
+scaling:
+  method: "standard"  # Options: "standard", "minmax", "robust"
+
+
+# Label Encoding
+label_encoding: true
