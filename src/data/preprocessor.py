@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from sklearn.impute import SimpleImputer
 from typing import Tuple, Optional
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 class DataPreprocessor:
     def __init__(self, config):
@@ -98,3 +99,43 @@ class DataPreprocessor:
         X_selected = X[selected_features]
         
         return X_selected
+    
+    def scale_features(self, X: pd.DataFrame) -> pd.DataFrame:
+        """
+        Scales numeric features in the DataFrame using the scaler specified in the config.
+
+        The config should have a 'scaling' section with a 'method' key, e.g.:
+            {'scaling': {'method': 'standard'}}  # or 'minmax'
+
+        Returns:
+            pd.DataFrame: DataFrame with scaled numeric features.
+        """
+
+        method = self.config.get("scaling", {}).get("method", "standard")
+        numeric_cols = X.select_dtypes(include=[np.number]).columns
+
+        if method == "minmax":
+            scaler = MinMaxScaler()
+        else:
+            scaler = StandardScaler()
+
+        X_scaled = X.copy()
+        X_scaled[numeric_cols] = scaler.fit_transform(X[numeric_cols])
+
+        return    X_scaled
+
+    def encode_label(self, y: pd.Series) -> pd.Series:
+        """
+        Encodes the target labels using label encoding.
+
+        Parameters:
+            y (pd.Series): Target variable to encode.
+
+        Returns:
+            pd.Series: Encoded target variable.
+        """
+        from sklearn.preprocessing import LabelEncoder
+
+        le = LabelEncoder()
+        y_encoded = le.fit_transform(y)
+        return y_encoded
