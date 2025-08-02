@@ -78,15 +78,23 @@ class DataPreprocessor:
             y = df[target_column].copy()
         return X,y
     
-    def reduce_dimensionality(self, X: pd.DataFrame) -> pd.DataFrame:
+    def select_features(self, X: pd.DataFrame) -> pd.DataFrame:
         """
-        Reduces the dimensionality of the feature DataFrame using PCA.
+        Selects a subset of features from the input DataFrame based on the configuration.
 
         Parameters:
             X (pd.DataFrame): Input features DataFrame.
             n_components (int): Number of principal components to keep.
 
         Returns:
-            pd.DataFrame: DataFrame with reduced dimensions.
+            pd.DataFrame: DataFrame containing only the selected features.
         """
-        pass
+        selected_features = self.config.get("feature_selection", {}).get("selected_features", [
+    "wmc", "max_cc", "loc", "cbo", "lcom", "rfc", "ca", "ce", "noc", "lcom3"])
+        if not selected_features:
+            return X
+        
+        # Select only specified features
+        X_selected = X[selected_features]
+        
+        return X_selected
