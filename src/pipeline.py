@@ -1,4 +1,5 @@
 from .data.loader import DatasetLoader
+from .data.preprocessor import DataPreprocessor
 from .utils import load_config
 
 
@@ -12,8 +13,14 @@ class ExperimentPipeline:
     def load_and_preprocess_data(self):
         self.data_loader = DatasetLoader(load_config("config/data/loading_config.yaml"))
         df = self.data_loader.load_dataset(f"{self.dataset_name}.csv")
-        # Apply any necessary preprocessing steps
-        pass
+
+        self.data_preprocessor = DataPreprocessor(load_config("config/data/preprocessing_config.yaml")) 
+        df = self.data_preprocessor.handle_missing_values(df)
+        X, y = self.data_preprocessor.separate_features_and_target(df)
+        X = self.data_preprocessor.select_features(X)
+        X = self.data_preprocessor.scale_features(X)
+        y = self.data_preprocessor.encode_label(y)
+        return X,y
 
     def build_model(self):
         # Build model based on self.model_name
