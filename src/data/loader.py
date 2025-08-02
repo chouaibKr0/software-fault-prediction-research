@@ -1,5 +1,4 @@
 import pandas as pd
-from typing import Tuple
 from ..utils import get_project_root
 
 class DatasetLoader:
@@ -7,12 +6,12 @@ class DatasetLoader:
         self.config = config
         self.dataset_dir = config.get("dataset_dir", "data/PROMISE/interim")
     
-    def load_dataset(self, dataset_file_name: str) -> Tuple[pd.DataFrame, pd.Series]:
+    def load_dataset(self, dataset_file_name: str) -> pd.DataFrame:
         """Load dataset from the specified file name.
         Args:
             dataset_file_name (str): The name of the dataset file to load.
         Returns:
-            X , y: Tuple[pd.DataFrame, pd.Series] where X is the feature DataFrame and y is the target Series.
+            dataset (pandas DataFrame): dataset as dataframe.
         Raises:
             FileNotFoundError: If the dataset file does not exist.
         """
@@ -22,7 +21,5 @@ class DatasetLoader:
             raise FileNotFoundError(f"Dataset file {full_path} does not exist.")
         
         df = pd.read_csv(full_path)
-        
-        X = df.drop(columns=["target"])
-        y = df["target"]
-        return X, y
+
+        return df

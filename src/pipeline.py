@@ -1,5 +1,7 @@
 from .data.loader import DatasetLoader
 from .utils import load_config
+
+
 class ExperimentPipeline:
     def __init__(self, dataset_name: str, model_name: str, hpo_name: str):
         self.dataset_name = dataset_name
@@ -9,7 +11,7 @@ class ExperimentPipeline:
 
     def load_and_preprocess_data(self):
         self.data_loader = DatasetLoader(load_config("config/data/loading_config.yaml"))
-        self.X, self.y = self.data_loader.load_dataset(f"{self.dataset_name}.csv")
+        df = self.data_loader.load_dataset(f"{self.dataset_name}.csv")
         # Apply any necessary preprocessing steps
         pass
 
