@@ -53,7 +53,7 @@ class DataPreprocessor:
         
         return df_imputed
         
-    def separate_features_and_target(df: pd.DataFrame, target_column: Optional[str]= None) -> Tuple[pd.DataFrame, pd.Series]:
+    def separate_features_and_target(self, df: pd.DataFrame, target_column: Optional[str]= None) -> Tuple[pd.DataFrame, pd.Series]:
         """
         Separates the features and target variable from the DataFrame.
 
