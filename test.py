@@ -1,6 +1,7 @@
 from src.data.loader import DatasetLoader
 from src.data.preprocessor import DataPreprocessor
 from src.utils import load_config
+from src.models.svm import SVM_Wrapper
 
 class Test:
     def __init__(self, dataset_name: str, model_name: str, hpo_name: str):
@@ -34,7 +35,13 @@ class Test:
         print("label encoded")
         print(y)
         return X,y
+    def test_model(self):
+        svm = SVM_Wrapper(load_config("config/model/svm_config.yaml").get("model_config",{}))
+        svm.set_params()
+        print(svm.get_params())
+        
     
 if __name__ == '__main__':
     mytest = Test('ant-1.3','','')
-    mytest.test_load_and_preprocess_data()
+    X, y = mytest.test_load_and_preprocess_data()
+    mytest.test_model()

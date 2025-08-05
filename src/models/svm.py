@@ -9,8 +9,7 @@ class SVM_Wrapper(BaseModel):
         self.random_state = random_state
     
     def _create_model(self, **params):
-        # Merge config model parameters with any passed params
-        model_params = self.config.get("model_config", {}).copy()
-        model_params.update(params)
-        model_params["random_state"] = self.random_state
-        return SVC(**model_params)
+        model_param = params
+        model_param.update(self.config)
+        model_param["random_state"]= 42
+        return SVC(**model_param)
