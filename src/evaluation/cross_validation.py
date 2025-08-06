@@ -54,7 +54,7 @@ def evaluate_model_cv(
 
     fold_scores = {score_name: [] for score_name in scoring}
     for fold_idx, (train_idx, val_idx) in enumerate(cv.split(X, y)):
-        X_train, X_val = X[train_idx], X[val_idx]
+        X_train, X_val = X.iloc[train_idx], X.iloc[val_idx]
         y_train, y_val = y[train_idx], y[val_idx]
 
         model.fit(X_train, y_train)
