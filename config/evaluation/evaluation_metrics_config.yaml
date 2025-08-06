@@ -8,5 +8,4 @@ metrics:
   - matthews_corrcoef  # Matthews Correlation Coefficient (binary, balanced, interpretable)
   - recall             # Fraction of positives correctly identified
   - precision          # Fraction of positive predictions correct
-  - specificity        # True negative rate (not built-in, but can be added)
   - neg_log_loss       # Negative Log Loss (probabilistic metric)
