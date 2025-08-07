@@ -5,6 +5,10 @@ import pandas as pd
 import numpy as np
 
 class BaseModel(ABC):
+    def __init__(self, config, random_state= 42):
+        self.model = None
+        self.config = config
+        self.random_state = random_state
 
     @abstractmethod
     def _create_model(self, **params) -> BaseEstimator:
