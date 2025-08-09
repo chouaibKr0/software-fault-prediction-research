@@ -29,7 +29,7 @@ class BaseOptimizer(ABC):
         """Extract and parse the hyperparameter search space for a given model."""
         model_config = model.config
         search_space = model_config.get("search_space", {})
-        return self._parse_search_space(search_space)
+        return search_space
 
     @abstractmethod
     def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:
