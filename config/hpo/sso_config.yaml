@@ -1,0 +1,5 @@
+optimizer_config:
+  n_salps: 30
+  max_iter: 100
+  strategy: "basic" # Options: basic, levy_flights, hybrid
+  transformation_function: "baseline"

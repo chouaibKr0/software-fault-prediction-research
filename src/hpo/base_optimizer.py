@@ -3,13 +3,22 @@ from ..models.base_model import BaseModel
 from typing import Dict, Any, Optional, Tuple
 import logging
 
+
 class BaseOptimizer(ABC):
     """
     Abstract base class for hyperparameter optimizers.
     Subclasses must implement the main optimization workflow.
     """
-    def __init__(self, config):
+    def __init__(self, config, model: BaseModel = None, logger:Optional[logging.Logger] = logging.getLogger('ml_experiment')):
         self.config = config
+        self.model = model
+        self.logger = logger
+    
+    def setModel(self, model: BaseModel)-> None:
+        """Set model to optimize if it is not set"""
+        if self.model != None:
+            raise ValueError("Model has already been initialized")
+        self.model = model
 
     @abstractmethod
     def _parse_search_space(self, search_space: Dict[str, Any]) -> Dict[str, Any]:
@@ -23,10 +32,5 @@ class BaseOptimizer(ABC):
         return self._parse_search_space(search_space)
 
     @abstractmethod
-    def _evaluate(self, model: BaseModel , params: Dict[str, Any] ) -> float:
-        """Train and evaluate the given model with specified hyperparameters."""
-        pass
-
-    @abstractmethod
-    def optimize(self, model: BaseModel, logger:Optional[logging.Logger] = None) -> Tuple[Dict[str, Any], float]:
+    def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:
         pass

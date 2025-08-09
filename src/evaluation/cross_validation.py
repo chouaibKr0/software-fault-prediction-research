@@ -36,7 +36,7 @@ def evaluate_model_cv(
             'fold_scores': [0.82, 0.87, 0.85, 0.84, 0.86]
         }
     """
-
+    cv_config= cv_config.get("cross_validation", {})
     method = cv_config.get('method', 'stratified_kfold')
     n_splits = cv_config.get('n_splits', 5)
     shuffle = cv_config.get('shuffle', True)

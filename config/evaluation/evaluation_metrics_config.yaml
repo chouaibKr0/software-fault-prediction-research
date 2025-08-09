@@ -1,11 +1,10 @@
-metrics:
-  single_metric: roc_auc
-  multi_metrics: 
-  - roc_auc            # Area under the ROC Curve
-  - average_precision  # Area under the Precision-Recall curve (AP-score)
-  - f1                 # F1 Score, harmonic mean of precision and recall
-  - balanced_accuracy  # Accuracy adjusted for imbalanced classes
-  - matthews_corrcoef  # Matthews Correlation Coefficient (binary, balanced, interpretable)
-  - recall             # Fraction of positives correctly identified
-  - precision          # Fraction of positive predictions correct
-  - neg_log_loss       # Negative Log Loss (probabilistic metric)
+single_metric: roc_auc
+multi_metrics: 
+- roc_auc            # Area under the ROC Curve
+- average_precision  # Area under the Precision-Recall curve (AP-score)
+- f1                 # F1 Score, harmonic mean of precision and recall
+- balanced_accuracy  # Accuracy adjusted for imbalanced classes
+- matthews_corrcoef  # Matthews Correlation Coefficient (binary, balanced, interpretable)
+- recall             # Fraction of positives correctly identified
+- precision          # Fraction of positive predictions correct
+- neg_log_loss       # Negative Log Loss (probabilistic metric)
