@@ -3,7 +3,7 @@ from src.data.preprocessor import DataPreprocessor
 from src.utils import load_config
 from src.models.svm import SVM_Wrapper
 from src.evaluation.cross_validation import evaluate_model_cv, evaluate_model_cv_mean
-from salp_swarm_optimizer import SalpSwarmOptimizer
+from src.hpo.salp_swarm_optimizer import SalpSwarmOptimizer
 
 class Test:
     def __init__(self, dataset_name: str, model_name: str, hpo_name: str):
@@ -67,6 +67,4 @@ if __name__ == '__main__':
     mytest = Test('ant-1.3','','')
     X, y = mytest.test_load_and_preprocess_data()
     mytest.test_sso(X,y)
-    #params = {'C': 324.41679653052046, 'kernel': 'sigmoid', 'gamma': 2.382604711156865e-05, 'degree': 3, 'coef0': -0.5334878135909171}
-    
-    #print(evaluate_model_cv_mean(SVM_Wrapper(mytest.model_config).set_params(**params).model, X, y, mytest.cv_config, mytest.single_scoring))
+    #({'C': 0.5670795711425214, 'kernel': 'poly', 'gamma': 0.0745212371804279, 'degree': 5, 'coef0': -0.15607152066820035}, np.float64(-0.8761904761904763))

@@ -30,6 +30,10 @@ class BaseOptimizer(ABC):
         model_config = model.config
         search_space = model_config.get("search_space", {})
         return search_space
+    
+    @abstractmethod
+    def get_hpo_name(self):
+        pass
 
     @abstractmethod
     def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:

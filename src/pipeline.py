@@ -1,40 +1,37 @@
-from .data.loader import DatasetLoader
-from .data.preprocessor import DataPreprocessor
-from .utils import load_config
 
+from .utils import load_config, setup_experiment
+from .hpo.base_optimizer import BaseOptimizer, BaseModel
 
 class ExperimentPipeline:
-    def __init__(self, dataset_name: str, model_name: str, hpo_name: str):
+    def __init__(self, dataset_name: str, model_class: BaseModel, hpo_class: BaseOptimizer):
         self.dataset_name = dataset_name
-        self.model_name = model_name
-        self.hpo_name = hpo_name
+        self.model_class = model_class
+        self.hpo_class = hpo_class
+        #setup exp
+        ...
 
 
-    def load_and_preprocess_data(self):
-        self.data_loader = DatasetLoader(load_config("config/data/loading_config.yaml"))
-        df = self.data_loader.load_dataset(f"{self.dataset_name}.csv")
+ 
 
-        self.data_preprocessor = DataPreprocessor(load_config("config/data/preprocessing_config.yaml")) 
-        df = self.data_preprocessor.handle_missing_values(df)
-        X, y = self.data_preprocessor.separate_features_and_target(df)
-        X = self.data_preprocessor.select_features(X)
-        X = self.data_preprocessor.scale_features(X)
-        y = self.data_preprocessor.encode_label(y)
-        return X,y
-
-    def build_model(self):
-        # Build model based on self.model_name
-        pass
-
-    def run_hpo(self):
-        # Implement HPO based on self.hpo_name over model
-        pass
-
-    def train_and_eval(self, model):
-        # Train and evaluate model on HPO results; return metrics
-        pass
 
 
 
     def run(self):
-        pass
+        # setup
+        data_loading_config= load_config("config/data/loading_config.yaml")
+        data_preprocessoing_config = load_config("config/data/preprocessing_config.yaml")
+        
+        model_config = load_config("config/model/svm_config.yaml")
+        multi_scoring = load_config("config/evaluation/evaluation_metrics_config.yaml").get("multi_metrics")
+        single_scoring = load_config("config/evaluation/evaluation_metrics_config.yaml").get("single_metric")
+        cv_config = load_config("config/evaluation/cross_validation_config.yaml")
+        hpo_config = load_config("config/hpo/sso_config.yaml")    
+
+
+
+        #load_and_preprocess_data
+        #run_hpo
+        #train_and_eval
+        #store_experiment_results(self)
+
+        ...

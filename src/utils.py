@@ -272,13 +272,13 @@ def setup_mlflow_experiment(experiment_name: str, tracking_uri: str = "mlruns") 
     except ImportError:
         print("MLflow not installed. Skipping MLflow setup.")
 
-def setup_experiment(experiment_name: str, config_files: List[str]) -> tuple:
+def setup_experiment(experiment_name: str, base_config_file: List[str]) -> tuple:
     """
     One-stop function to setup everything for an experiment.
     
     Args:
         experiment_name: Name of the experiment
-        config_files: List of config file paths to merge
+        base_config_file: base config path to load
         
     Returns:
         Tuple of (config, logger, directories, experiment_id)
@@ -291,7 +291,7 @@ def setup_experiment(experiment_name: str, config_files: List[str]) -> tuple:
         )
     """
     # Load and merge configurations
-    config = merge_configs(*config_files)
+    config = load_config(base_config_file)
     
     # Set random seeds for reproducibility
     set_random_seeds()
@@ -310,7 +310,7 @@ def setup_experiment(experiment_name: str, config_files: List[str]) -> tuple:
     if config.get('use_mlflow', True):
         setup_mlflow_experiment(experiment_name, config.get('mlflow_tracking_uri', 'mlruns'))
     
-    return config, logger, directories, experiment_id
+    return  logger, directories, experiment_id
 
 #def save_experiment(experiment_id: str, model_name: str, hpo_name: str, config: Dict[str, Any], results: Dict[str, Any], 
 #                   directories: Dict[str, Path], logger: logging.Logger) -> Dict[str, Path]:

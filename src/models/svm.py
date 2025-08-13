@@ -9,3 +9,6 @@ class SVM_Wrapper(BaseModel):
         model_param.update(self.config.get("model_config",{}))
         model_param["random_state"]= 42
         return SVC(**model_param)
+    
+    def get_model_name(self):
+        return 'svm'

@@ -28,6 +28,15 @@ class SalpSwarmOptimizer(BaseOptimizer):
         self._best_params = None
         self.param_info = None
         
+    def get_hpo_name(self):
+        """Generate HPO name safely, handling missing attributes."""
+        strategy = getattr(self, 'strategy', 'default')
+        transformation_function = getattr(self, 'transformation_function', 'default')
+        num_salps = getattr(self, 'num_salps', 'default')
+        max_iter = getattr(self, 'max_iter', 'default')
+        
+        return f'sso_{strategy}_{transformation_function}_{num_salps}x{max_iter}'
+
     def _parse_search_space(self, search_space: Dict[str, Any]) -> Dict[str, Any]:
         """
         Converts the search space dict into a flat config list of
@@ -203,7 +212,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
         """Create objective function for cross-validation evaluation."""
         def objective_fn(**param):
             try:
-                model = self.model.set_params(**param)
+                model = self.model.set_params(**param).model
                 scores = evaluate_model_cv_mean(
                     model, X, y, cv_config=config, scoring=objective_metric
                 )
@@ -240,7 +249,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
         
         # Initialize best solution by evaluating initial positions
         for i in range(self.num_salps):
-            fitness = _objective_fn(self.positions[i])
+            fitness = -_objective_fn(self.positions[i])
             if fitness < self.food_fitness:
                 self.food_fitness = fitness
                 self.food_position = self.positions[i].copy()
@@ -264,7 +273,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
                 self.positions[i] = np.clip(self.positions[i], self.lb, self.ub)
                 
                 # Evaluate fitness
-                fitness = _objective_fn(self.positions[i])
+                fitness = -_objective_fn(self.positions[i])
                 
                 # Update best solution
                 if fitness < self.food_fitness:
@@ -384,7 +393,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
             candidate = np.clip(candidate, self.lb, self.ub)
             
             # Evaluate candidate
-            fitness = _objective_fn(candidate)
+            fitness = -_objective_fn(candidate)
             
             # Update if better
             if fitness < self.food_fitness:

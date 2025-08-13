@@ -12,9 +12,12 @@ feature_selection:
   #  "wmc", "max_cc", "loc", "cbo", "lcom"
   #]
 
+  #selected_features: [
+  #  "wmc", "max_cc", "loc", "cbo", "lcom", "rfc", "ca", "ce", "noc", "lcom3"
+  #]
   selected_features: [
-    "wmc", "max_cc", "loc", "cbo", "lcom", "rfc", "ca", "ce", "noc", "lcom3"
-  ]
+    "wmc","dit","noc","cbo","rfc","lcom","ca","ce","npm","loc","dam","moa","amc","max_cc","avg_cc"
+    ]
 
 # Scaling
 scaling:
