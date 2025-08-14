@@ -2,17 +2,23 @@ from abc import ABC, abstractmethod
 from ..models.base_model import BaseModel 
 from typing import Dict, Any, Optional, Tuple
 import logging
-
+from pathlib import Path
+from ..utils import load_config
 
 class BaseOptimizer(ABC):
     """
     Abstract base class for hyperparameter optimizers.
     Subclasses must implement the main optimization workflow.
     """
-    def __init__(self, config, model: BaseModel = None, logger:Optional[logging.Logger] = logging.getLogger('ml_experiment')):
+    DEFAULT_CONFIG_PATH: Optional[Path] = None
+
+    def __init__(self, config:Optional[Dict[str, Any]]=None, model: BaseModel = None, logger:Optional[logging.Logger] = logging.getLogger('ml_experiment')):
         self.config = config
         self.model = model
         self.logger = logger
+        if config == None and self.DEFAULT_CONFIG_PATH != None:
+               self.config = load_config(self.DEFAULT_CONFIG_PATH)
+            
     
     def setModel(self, model: BaseModel)-> None:
         """Set model to optimize if it is not set"""
@@ -31,9 +37,6 @@ class BaseOptimizer(ABC):
         search_space = model_config.get("search_space", {})
         return search_space
     
-    @abstractmethod
-    def get_hpo_name(self):
-        pass
 
     @abstractmethod
     def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:

@@ -5,10 +5,11 @@ import random
 from . import sso_decoder
 from ..evaluation.cross_validation import evaluate_model_cv_mean
 from typing import Dict, Any, Tuple, Optional
-
+from pathlib import Path
 class SalpSwarmOptimizer(BaseOptimizer):
     
-    def __init__(self, config, model=None, logger=None):
+    def __init__(self, config=None, model=None, logger=None):
+        self.DEFAULT_CONFIG_PATH = Path("config/hpo/sso_config.yaml")
         super().__init__(config, model, logger)
         
         # Fixed initialization with proper defaults
@@ -28,15 +29,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
         self._best_params = None
         self.param_info = None
         
-    # remove me get_hpo_name
-    def get_hpo_name(self):
-        """Generate HPO name safely, handling missing attributes."""
-        strategy = getattr(self, 'strategy', 'default')
-        transformation_function = getattr(self, 'transformation_function', 'default')
-        num_salps = getattr(self, 'num_salps', 'default')
-        max_iter = getattr(self, 'max_iter', 'default')
-        
-        return f'sso_{strategy}_{transformation_function}_{num_salps}x{max_iter}'
+
 
     def _parse_search_space(self, search_space: Dict[str, Any]) -> Dict[str, Any]:
         """

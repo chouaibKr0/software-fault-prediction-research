@@ -9,6 +9,7 @@ import numpy as np
 import json
 import random
 from dataclasses import dataclass, asdict
+from .utils import get_config_by_name, get_project_root
 
 @dataclass
 class ExperimentResult:
@@ -63,28 +64,15 @@ class MLExperiment:
         import hashlib
         
         # Extract important HPO parameters
-        hpo_config = load_hpo_config(self.hpo_name)
-        important_params = {
-            'n_trials': hpo_config.get('n_trials', 100),
-            'timeout': hpo_config.get('timeout', None),
-            'sampler': hpo_config.get('sampler', 'TPE'),
-        }
-        
-        # Add model-specific important params
-        model_params = self.config.get('model_params', {})
-        if model_params:
-            # Take a few key model parameters
-            for key in ['C', 'gamma', 'kernel', 'n_estimators', 'max_depth']:
-                if key in model_params:
-                    important_params[f'model_{key}'] = model_params[key]
-        
-        # Create hash
+        hpo_config = get_config_by_name(self.hpo_name)
+        important_params = hpo_config.get('optimizer_config', {})
+        self.hpo_important_params = important_params
         param_str = json.dumps(important_params, sort_keys=True)
         return hashlib.md5(param_str.encode()).hexdigest()[:8]
     
     def _create_directories(self) -> Dict[str, Path]:
         """Create experiment directory structure"""
-        exp_dir = self.base_dir / self.experiment_id
+        exp_dir = get_project_root() / self.base_dir / self.experiment_id
         
         directories = {
             'experiment_dir': exp_dir,
@@ -134,7 +122,7 @@ class MLExperiment:
             mlflow.set_tracking_uri(tracking_uri)
             
             # Create or get experiment
-            experiment_name = f"{self.model_name}_{self.dataset_name}_experiments"
+            experiment_name = f"{self.hpo_name}_{self.hpo_config_hash}_{self.model_name}_{self.dataset_name}_experiments"
             try:
                 mlflow.create_experiment(experiment_name)
             except:
@@ -151,10 +139,22 @@ class MLExperiment:
         """Start the experiment"""
         self.start_time = datetime.now()
         
-        # Save initial configuration
-        config_path = self.directories['configs'] / 'experiment_config.json'
-        with open(config_path, 'w') as f:
-            json.dump(self.config, f, indent=2, default=str)
+        import shutil
+
+        # Copy entire project config directory
+        project_config_dir = get_project_root() / 'config'  # or wherever your project configs are
+        destination_config_dir = self.directories['configs']
+
+        if project_config_dir.exists():
+            # Remove existing destination if it exists (since copytree can't overwrite)
+            if destination_config_dir.exists():
+                shutil.rmtree(destination_config_dir)
+            
+            # Copy entire directory tree
+            shutil.copytree(project_config_dir, destination_config_dir)
+        else:
+            print(f"Warning: Project config directory {project_config_dir} not found")
+
         
         self.logger.info("=" * 80)
         self.logger.info(f"STARTING ML EXPERIMENT: {self.experiment_id}")
@@ -164,12 +164,7 @@ class MLExperiment:
         self.logger.info(f"Start Time: {self.start_time}")
         self.logger.info("=" * 80)
         
-        # Log key configuration
-        self.logger.info("Key Configuration:")
-        self.logger.info(f"  HPO Trials: {self.config.get('hpo_params', {}).get('n_trials', 'N/A')}")
-        self.logger.info(f"  Model Params: {self.config.get('model_params', {})}")
-        self.logger.info(f"  Data Split: {self.config.get('data_split', {})}")
-        
+
         if self.mlflow_enabled:
             import mlflow
             self.mlflow_run = mlflow.start_run(run_name=self.experiment_id)
@@ -181,26 +176,15 @@ class MLExperiment:
             })
             
             # Log configuration parameters
-            if 'hpo_params' in self.config:
-                mlflow.log_params({f"hpo_{k}": v for k, v in self.config['hpo_params'].items()})
-            if 'model_params' in self.config:
-                mlflow.log_params({f"model_{k}": v for k, v in self.config['model_params'].items()})
+    
+            mlflow.log_params({f"hpo_{k}": v for k, v in self.hpo_important_params.items()})
+
+            mlflow.log_params({f"model_{k}": v for k, v in get_config_by_name(self.model_name).items()})
         
         return self
     
-    def log_optimization_progress(self, trial_num: int, current_score: float, 
-                                 current_params: Dict[str, Any]):
-        """Log progress during optimization"""
-        self.logger.info(f"Trial {trial_num}: Score = {current_score:.6f}, Params = {current_params}")
-        
-        if self.mlflow_enabled:
-            import mlflow
-            mlflow.log_metrics({
-                'trial_score': current_score,
-                'trial_number': trial_num
-            }, step=trial_num)
     
-    def finish(self, best_params: Dict[str, Any], best_score: float, 
+    def finish(self, best_params: Dict[str, Any], best_score: float , 
                evaluation_metrics: Dict[str, float], 
                additional_artifacts: Optional[Dict[str, Any]] = None) -> ExperimentResult:
         """Finish the experiment and save all results"""
@@ -276,9 +260,9 @@ class MLExperiment:
         
         self.logger.info(f"Results saved to: {self.directories['results']}")
 
-# Usage example function
+
 def setup_experiment(dataset_name: str, model_name: str, hpo_name: str, 
-                     config_files: List[str]) -> MLExperiment:
+                     config: Dict[str,Any]= None) -> MLExperiment:
     """
     Setup a complete ML experiment
     
@@ -292,8 +276,8 @@ def setup_experiment(dataset_name: str, model_name: str, hpo_name: str,
         Initialized MLExperiment object
     """
     # Load and merge configurations (using existing function)
-    config = merge_configs(*config_files)
-    
+    if config == None:
+        config = get_config_by_name('base')
     # Set random seeds
     seed = config.get('random_seed', 42)
     random.seed(seed)

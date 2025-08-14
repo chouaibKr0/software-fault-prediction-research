@@ -4,10 +4,20 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from typing import Tuple, Optional
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from typing import Dict, Optional, Any
+from pathlib import Path
+from ..utils import load_config
 
 class DataPreprocessor:
-    def __init__(self, config):
+    """Class for preprocessing loaded dataset"""
+
+    DEFAULT_CONFIG_PATH: Optional[Path] = Path("config/data/preprocessing_config.yaml")
+
+    def __init__(self, config:Optional[Dict[str, Any]]=None):
         self.config = config
+        if config == None and self.DEFAULT_CONFIG_PATH != None:
+               self.config = load_config(self.DEFAULT_CONFIG_PATH)
+                    
     
     def handle_missing_values(self, df: pd.DataFrame, categorical_strategy: str = 'drop') -> pd.DataFrame:
         """

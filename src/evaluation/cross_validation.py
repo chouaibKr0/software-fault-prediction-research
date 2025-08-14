@@ -6,12 +6,17 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.base import BaseEstimator
 from sklearn.metrics import get_scorer
 import warnings
+from ..utils import load_config
+from typing import Optional
+from pathlib import Path
+
+DEFAULT_CONFIG_PATH: Optional[Path] = Path("config/evaluation/cross_validation_config.yaml")
 
 def evaluate_model_cv(
     model: BaseEstimator,
     X: Union[np.ndarray, pd.DataFrame],
     y: np.ndarray,
-    cv_config: Dict[str, Any],
+    cv_config: Dict[str, Any] = load_config(DEFAULT_CONFIG_PATH),
     scoring: Union[str, list] = 'roc_auc',
 ) -> Dict[str, Any]:
     """
@@ -108,7 +113,7 @@ def evaluate_model_cv_mean(
     model,
     X,
     y,
-    cv_config: Dict[str, Any],
+    cv_config: Dict[str, Any]= load_config(DEFAULT_CONFIG_PATH),
     scoring: Union[str, list] = 'roc_auc'
 ) -> Dict[str, float]:
     """
