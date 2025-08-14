@@ -21,6 +21,10 @@ class BaseModel(ABC):
     def _create_model(self, **params) -> BaseEstimator:
         """Create the sklearn model."""
         pass
+
+    @abstractmethod
+    def get_model_name(self) -> str:
+        pass
     
     @abstractmethod
     def get_model_name(self):

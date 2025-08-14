@@ -19,6 +19,9 @@ class BaseOptimizer(ABC):
         if config == None and self.DEFAULT_CONFIG_PATH != None:
                self.config = load_config(self.DEFAULT_CONFIG_PATH)
             
+    @abstractmethod
+    def get_hpo_name(self) -> str:
+        pass
     
     def setModel(self, model: BaseModel)-> None:
         """Set model to optimize if it is not set"""

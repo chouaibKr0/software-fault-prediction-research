@@ -1,14 +1,19 @@
 
-from .utils import load_config, setup_experiment
-from .hpo.base_optimizer import BaseOptimizer, BaseModel
+from .utils import load_config, setup_experiment, get_config_by_name
+from .experiment import setup_experiment
+from .models.base_model import BaseModel
+from .hpo.base_optimizer import BaseOptimizer
+from .data.loader import DatasetLoader
+from .data.preprocessor import DataPreprocessor
+
 
 class ExperimentPipeline:
-    def __init__(self, dataset_name: str, model_class: BaseModel, hpo_class: BaseOptimizer):
-        self.dataset_name = dataset_name
-        self.model_class = model_class
-        self.hpo_class = hpo_class
-        #setup exp
-        ...
+    def __init__(self, dataset_name: str, model: BaseModel, hpo: BaseOptimizer):
+        self.dataset_name = dataset_name,
+        self.model = model,
+        self.hpo = hpo,
+        self.model_name = model.get_model_name
+        self.hpo_name = hpo.get_hpo_name
 
 
  
@@ -17,21 +22,22 @@ class ExperimentPipeline:
 
 
     def run(self):
-        # setup
-        data_loading_config= load_config("config/data/loading_config.yaml")
-        data_preprocessoing_config = load_config("config/data/preprocessing_config.yaml")
-        
-        model_config = load_config("config/model/svm_config.yaml")
-        multi_scoring = load_config("config/evaluation/evaluation_metrics_config.yaml").get("multi_metrics")
-        single_scoring = load_config("config/evaluation/evaluation_metrics_config.yaml").get("single_metric")
-        cv_config = load_config("config/evaluation/cross_validation_config.yaml")
-        hpo_config = load_config("config/hpo/sso_config.yaml")    
+        # Setup expriment
+        experiment = setup_experiment(self.dataset_name, self.model_name, self.hpo_name)
+        logger = None
+        # Load and process data
+        dataLoader = DatasetLoader(get_config_by_name('loading'))
+        df = dataLoader.load_dataset(self.dataset_name)
+        dataPreprocessor = DataPreprocessor(get_config_by_name('preprocessing'))
+        df = dataPreprocessor.handle_missing_values(df)
+        X, y =dataPreprocessor.separate_features_and_target(df)
+        X = dataPreprocessor.select_features(X)
+        X = dataPreprocessor.scale_features(X)
+        y = dataPreprocessor.encode_label(y) 
+
+        #Optimize
+        model = self.model(get_config_by_name(self.model_name))
+        hpo:BaseOptimizer = self.hpo(get_config_by_name(self.hpo_name), model, logger)
+        hpo.optimize(hpo)
 
 
-
-        #load_and_preprocess_data
-        #run_hpo
-        #train_and_eval
-        #store_experiment_results(self)
-
-        ...

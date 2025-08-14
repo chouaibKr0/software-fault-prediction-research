@@ -29,7 +29,8 @@ class SalpSwarmOptimizer(BaseOptimizer):
         self._best_params = None
         self.param_info = None
         
-
+    def get_hpo_name(self):
+        return 'sso'
 
     def _parse_search_space(self, search_space: Dict[str, Any]) -> Dict[str, Any]:
         """
