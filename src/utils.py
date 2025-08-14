@@ -77,6 +77,10 @@ def load_config(config_relative_path: Union[str, Path]) -> Dict[str, Any]:
         return config or {}
     except yaml.YAMLError as e:
         raise ValueError(f"Error parsing YAML file {config_path}: {e}")
+    
+def load_hpo_config(hpo_name:str) -> Dict[str, Any]:
+    """Load_hpo_config_by_name"""
+    
 
 def merge_configs(*config_paths: Union[str, Path]) -> Dict[str, Any]:
     """

@@ -28,6 +28,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
         self._best_params = None
         self.param_info = None
         
+    # remove me get_hpo_name
     def get_hpo_name(self):
         """Generate HPO name safely, handling missing attributes."""
         strategy = getattr(self, 'strategy', 'default')

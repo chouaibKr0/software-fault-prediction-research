@@ -63,7 +63,7 @@ class MLExperiment:
         import hashlib
         
         # Extract important HPO parameters
-        hpo_config = self.config.get('hpo_params', {})
+        hpo_config = load_hpo_config(self.hpo_name)
         important_params = {
             'n_trials': hpo_config.get('n_trials', 100),
             'timeout': hpo_config.get('timeout', None),
@@ -305,6 +305,7 @@ def setup_experiment(dataset_name: str, model_name: str, hpo_name: str,
 
 # Utility functions for experiment analysis
 def load_experiment_result(experiment_id: str, base_dir: str = "experiments") -> ExperimentResult:
+    ...
     """Load experiment result from saved files"""
     results_path = Path(base_dir) / experiment_id / 'results' / 'experiment_results.json'
     
@@ -314,6 +315,7 @@ def load_experiment_result(experiment_id: str, base_dir: str = "experiments") ->
     return ExperimentResult(**data)
 
 def compare_experiments(experiment_ids: List[str], base_dir: str = "experiments") -> List[ExperimentResult]:
+    ...
     """Load and compare multiple experiments"""
     results = []
     for exp_id in experiment_ids:
