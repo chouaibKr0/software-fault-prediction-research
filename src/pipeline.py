@@ -1,11 +1,11 @@
 
-from .utils import load_config, setup_experiment, get_config_by_name
+from .utils import load_config, setup_experiment, get_config_by_name, get_single_scoring, get_multi_scoring
 from .experiment import setup_experiment
 from .models.base_model import BaseModel
 from .hpo.base_optimizer import BaseOptimizer
 from .data.loader import DatasetLoader
 from .data.preprocessor import DataPreprocessor
-
+from .evaluation.cross_validation import evaluate_model_cv_mean
 
 class ExperimentPipeline:
     def __init__(self, dataset_name: str, model: BaseModel, hpo: BaseOptimizer):
@@ -35,9 +35,17 @@ class ExperimentPipeline:
         X = dataPreprocessor.scale_features(X)
         y = dataPreprocessor.encode_label(y) 
 
-        #Optimize
+        # Optimize
         model = self.model(get_config_by_name(self.model_name))
         hpo:BaseOptimizer = self.hpo(get_config_by_name(self.hpo_name), model, logger)
-        hpo.optimize(hpo)
+        objective_function = hpo.objective_function(get_config_by_name('cv'), get_single_scoring(), X,y)
+        best_params, ng_score = hpo.optimize(objective_function)
+        score = -ng_score
+        # Evaluate Final Model
+        evaluation = evaluate_model_cv_mean(model, X, y, get_config_by_name('cv'), get_multi_scoring())
+        # Save Experiment Results
+        experiment.finish(best_params,score,evaluation)
+
+
 
 

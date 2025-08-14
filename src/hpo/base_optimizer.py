@@ -40,7 +40,29 @@ class BaseOptimizer(ABC):
         search_space = model_config.get("search_space", {})
         return search_space
     
-
+    @abstractmethod
+    def objective_function(self, ev_config, objective_metric, X, y):
+        """
+        Create objective function for model evaluation.
+        
+        This method should return a callable that evaluates model parameters
+        and returns a numeric score for optimization.
+        
+        Args:
+            config: Configuration object for evaluation (e.g., CV config)
+            objective_metric (str): Name of the metric to optimize
+            X: Training features
+            y: Training targets
+            
+        Returns:
+            callable: Function that takes **param and returns float score
+                     Should return float('inf') for failed evaluations
+                     
+        Note:
+            Child classes must implement their specific evaluation logic
+            (e.g., cross-validation, holdout validation, etc.)
+        """
+        pass
     @abstractmethod
     def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:
         pass
