@@ -7,33 +7,12 @@ import yaml
 import numpy as np
 import json
 import random
-from .data.loader import DatasetLoader
-from .data.preprocessor import DataPreprocessor
-from .evaluation import cross_validation
-from .hpo.salp_swarm_optimizer import SalpSwarmOptimizer
-from .models.svm import SVM_Wrapper 
+
 
 def get_project_root() -> Path:
     """Get the root directory of the project."""
     return Path(__file__).parent.parent
 
-CLASS_REGISTRY = {
-    'data_loader': DatasetLoader,
-    'data_preprocessor': DataPreprocessor,
-    'salp_swarm_optimizer': SalpSwarmOptimizer,
-    'svm': SVM_Wrapper,
-}
-
-# Optional: Add aliases for backward compatibility
-CLASS_ALIASES = {
-    'loading': 'data_loader',
-    'data_loading': 'data_loader',
-    'preprocessing': 'data_preprocessor', 
-    'data_preprocessing': 'data_preprocessor', 
-    'sso': 'salp_swarm_optimizer',
-    'ssa': 'salp_swarm_optimizer',
-    'salp_swarm_algorithm':'salp_swarm_optimizer',
-}
 
 
 def setup_logging(log_level: str = "INFO", log_dir: str = "experiments/logs") -> logging.Logger:
@@ -141,30 +120,55 @@ def load_base_config(base_config_path: str = None) -> Dict[str, Any]:
         base_config_path= 'config/base_config.yaml'
     return load_config(base_config_path)  # Adjust path as needed
 
-def get_class_by_name(name: str):
-    """
-    Maps a name to a class from the CLASS_REGISTRY.
-    
-    Args:
-        name (str): The name or alias of the class to retrieve
-        
-    Returns:
-        class or None: The corresponding class if found, None otherwise
-    """
-    # First check if name is directly in the registry
-    if name in CLASS_REGISTRY:
-        return CLASS_REGISTRY[name]
-    
-    # Check if it's an alias and resolve it
-    if name in CLASS_ALIASES:
-        actual_key = CLASS_ALIASES[name]
-        return CLASS_REGISTRY.get(actual_key)
-    
-    # Not found
-    return None
 
 def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
-    config_name = configuration_name.lower() 
+    from .data.loader import DatasetLoader
+    from .data.preprocessor import DataPreprocessor
+    from .evaluation import cross_validation
+    from .hpo.salp_swarm_optimizer import SalpSwarmOptimizer
+    from .models.svm import SVM_Wrapper 
+    config_name = configuration_name
+
+    def get_class_by_name(name: str):
+        """
+        Maps a name to a class from the CLASS_REGISTRY.
+        
+        Args:
+            name (str): The name or alias of the class to retrieve
+            
+        Returns:
+            class or None: The corresponding class if found, None otherwise
+        """
+        CLASS_REGISTRY = {
+
+            'data_loader': DatasetLoader,
+            'data_preprocessor': DataPreprocessor,
+            'salp_swarm_optimizer': SalpSwarmOptimizer,
+            'svm': SVM_Wrapper,
+        }
+
+        # Optional: Add aliases for backward compatibility
+        CLASS_ALIASES = {
+            'loading': 'data_loader',
+            'data_loading': 'data_loader',
+            'preprocessing': 'data_preprocessor', 
+            'data_preprocessing': 'data_preprocessor', 
+            'sso': 'salp_swarm_optimizer',
+            'ssa': 'salp_swarm_optimizer',
+            'salp_swarm_algorithm':'salp_swarm_optimizer',
+        }
+
+        # First check if name is directly in the registry
+        if name in CLASS_REGISTRY:
+            return CLASS_REGISTRY[name]
+        
+        # Check if it's an alias and resolve it
+        if name in CLASS_ALIASES:
+            actual_key = CLASS_ALIASES[name]
+            return CLASS_REGISTRY.get(actual_key)
+        
+        # Not found
+        return None
     cls = get_class_by_name(config_name)
     if cls != None:
      return load_config(cls.DEFAULT_CONFIG_PATH)

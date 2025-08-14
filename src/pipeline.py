@@ -15,12 +15,6 @@ class ExperimentPipeline:
         self.model_name = model.get_model_name
         self.hpo_name = hpo.get_hpo_name
 
-
- 
-
-
-
-
     def run(self):
         # Setup expriment
         experiment = setup_experiment(self.dataset_name, self.model_name, self.hpo_name)
