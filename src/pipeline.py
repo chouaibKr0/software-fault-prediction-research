@@ -1,5 +1,5 @@
 
-from .utils import load_config, setup_experiment, get_config_by_name, get_single_scoring, get_multi_scoring
+from .utils import  get_config_by_name, get_multi_scoring,get_single_scoring
 from .experiment import setup_experiment
 from .models.base_model import BaseModel
 from .hpo.base_optimizer import BaseOptimizer

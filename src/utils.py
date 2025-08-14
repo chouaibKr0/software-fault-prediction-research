@@ -193,3 +193,13 @@ def set_random_seeds() -> None:
         pass
 
 
+def get_single_scoring(config_path: str | Path = None):
+    if config_path == None:
+        config_path = 'config/evaluation/evaluation_metrics_config.yaml'
+    return load_config(config_path).get('single_metric', 'roc_auc')
+
+def get_multi_scoring(config_path: str | Path = None):
+    if config_path == None:
+        config_path = 'config/evaluation/evaluation_metrics_config.yaml'
+    return load_config(config_path).get('multi_metrics', {})
+
