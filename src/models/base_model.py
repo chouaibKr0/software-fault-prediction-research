@@ -10,7 +10,7 @@ class BaseModel(ABC):
     """Abstract base class for a ml model wrraper."""
     DEFAULT_CONFIG_PATH: Optional[Path] = None
 
-    def __init__(self, config, random_state= 42):
+    def __init__(self, config: Dict[str, Any] = None, random_state= 42):
         self.model = None
         self.config = config
         self.random_state = random_state
@@ -26,9 +26,7 @@ class BaseModel(ABC):
     def get_model_name(self) -> str:
         pass
     
-    @abstractmethod
-    def get_model_name(self):
-        pass
+
         
     def set_params(self, **params) -> 'BaseModel':
         """Set model parameters."""

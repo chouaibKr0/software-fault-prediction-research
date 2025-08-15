@@ -282,7 +282,6 @@ def setup_experiment(dataset_name: str, model_name: str, hpo_name: str,
     seed = config.get('random_seed', 42)
     random.seed(seed)
     np.random.seed(seed)
-    
     # Create and start experiment
     experiment = MLExperiment(dataset_name, model_name, hpo_name, config)
     return experiment.start()

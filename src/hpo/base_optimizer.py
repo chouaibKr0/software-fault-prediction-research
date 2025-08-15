@@ -12,7 +12,7 @@ class BaseOptimizer(ABC):
     """
     DEFAULT_CONFIG_PATH: Optional[Path] = None
 
-    def __init__(self, config:Optional[Dict[str, Any]]=None, model: BaseModel = None, logger:Optional[logging.Logger] = logging.getLogger('ml_experiment')):
+    def __init__(self, config:Dict[str, Any] = None, model: BaseModel = None, logger:Optional[logging.Logger] = logging.getLogger('ml_experiment')):
         self.config = config
         self.model = model
         self.logger = logger

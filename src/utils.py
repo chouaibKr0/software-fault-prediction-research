@@ -129,6 +129,23 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
     from .models.svm import SVM_Wrapper 
     config_name = configuration_name
 
+    CLASS_REGISTRY = {
+        'data_loader': DatasetLoader,
+        'data_preprocessor': DataPreprocessor,
+        'salp_swarm_optimizer': SalpSwarmOptimizer,
+        'svm': SVM_Wrapper
+    }
+
+    # Optional: Add aliases for backward compatibility
+    CLASS_ALIASES = {
+        'loading': 'data_loader',
+        'data_loading': 'data_loader',
+        'preprocessing': 'data_preprocessor', 
+        'data_preprocessing': 'data_preprocessor', 
+        'sso': 'salp_swarm_optimizer',
+        'ssa': 'salp_swarm_optimizer',
+        'salp_swarm_algorithm':'salp_swarm_optimizer'
+    }    
     def get_class_by_name(name: str):
         """
         Maps a name to a class from the CLASS_REGISTRY.
@@ -139,24 +156,7 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
         Returns:
             class or None: The corresponding class if found, None otherwise
         """
-        CLASS_REGISTRY = {
 
-            'data_loader': DatasetLoader,
-            'data_preprocessor': DataPreprocessor,
-            'salp_swarm_optimizer': SalpSwarmOptimizer,
-            'svm': SVM_Wrapper,
-        }
-
-        # Optional: Add aliases for backward compatibility
-        CLASS_ALIASES = {
-            'loading': 'data_loader',
-            'data_loading': 'data_loader',
-            'preprocessing': 'data_preprocessor', 
-            'data_preprocessing': 'data_preprocessor', 
-            'sso': 'salp_swarm_optimizer',
-            'ssa': 'salp_swarm_optimizer',
-            'salp_swarm_algorithm':'salp_swarm_optimizer',
-        }
 
         # First check if name is directly in the registry
         if name in CLASS_REGISTRY:
@@ -170,12 +170,13 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
         # Not found
         return None
     cls = get_class_by_name(config_name)
-    if cls != None:
-     return load_config(cls.DEFAULT_CONFIG_PATH)
+    if cls != None and cls().DEFAULT_CONFIG_PATH != None:
+     return load_config(cls().DEFAULT_CONFIG_PATH)
     elif config_name == 'basic' or config_name == 'base':
         return load_base_config()
     elif config_name == 'cross_validation' or config_name == 'cv' or config_name == 'evaluation' or config_name == 'ev':
-        return load_config(cross_validation.DEFAULT_CONFIG_PATH)
+        if cross_validation.DEFAULT_CONFIG_PATH != None:
+            return load_config(cross_validation.DEFAULT_CONFIG_PATH)
     else:
         raise ValueError(f"No configuration file found for '{configuration_name}'")
 
@@ -206,4 +207,3 @@ def get_multi_scoring(config_path: str | Path = None):
     if config_path == None:
         config_path = 'config/evaluation/evaluation_metrics_config.yaml'
     return load_config(config_path).get('multi_metrics', {})
-

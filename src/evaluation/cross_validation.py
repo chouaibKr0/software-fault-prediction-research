@@ -110,7 +110,7 @@ def evaluate_model_cv(
     return results
 
 def evaluate_model_cv_mean(
-    model,
+    model: BaseEstimator,
     X,
     y,
     cv_config: Dict[str, Any]= load_config(DEFAULT_CONFIG_PATH),

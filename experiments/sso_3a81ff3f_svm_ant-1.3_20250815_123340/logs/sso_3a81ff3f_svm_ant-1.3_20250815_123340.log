@@ -1,0 +1,16 @@
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - MLflow tracking enabled: mlruns
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - ================================================================================
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - STARTING ML EXPERIMENT: sso_3a81ff3f_svm_ant-1.3_20250815_123340
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Dataset: ant-1.3
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Model: svm
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - HPO Method: sso
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Start Time: 2025-08-15 12:33:40.361968
+2025-08-15 12:33:40 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - ================================================================================
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Results saved to: /home/chouaib/Code/rxu001/experiments/sso_3a81ff3f_svm_ant-1.3_20250815_123340/results
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - --------------------------------------------------------------------------------
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - EXPERIMENT COMPLETED: sso_3a81ff3f_svm_ant-1.3_20250815_123340
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Duration: 50.26 seconds
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Best Score: 0.876190
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Best Params: {'C': 0.3846153470416193, 'kernel': 'poly', 'gamma': 0.058386516643012795, 'degree': 3, 'coef0': -0.26556914373561963}
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - Evaluation Metrics: {'roc_auc': np.float64(0.8761904761904763), 'average_precision': np.float64(0.6646500721500722), 'f1': np.float64(0.5756843156843157), 'balanced_accuracy': np.float64(0.7785714285714285), 'matthews_corrcoef': np.float64(0.5006425922099207), 'recall': np.float64(0.7), 'precision': np.float64(0.519047619047619), 'neg_log_loss': np.float64(-0.49830903176855834)}
+2025-08-15 12:34:30 - experiment_sso_3a81ff3f_svm_ant-1.3_20250815_123340 - INFO - ================================================================================

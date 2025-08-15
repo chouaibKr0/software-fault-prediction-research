@@ -1,5 +1,5 @@
 
-from .utils import  get_config_by_name, get_multi_scoring,get_single_scoring
+from .utils import  get_config_by_name, get_multi_scoring,get_single_scoring, load_config
 from .experiment import setup_experiment
 from .models.base_model import BaseModel
 from .hpo.base_optimizer import BaseOptimizer
@@ -9,19 +9,21 @@ from .evaluation.cross_validation import evaluate_model_cv_mean
 
 class ExperimentPipeline:
     def __init__(self, dataset_name: str, model: BaseModel, hpo: BaseOptimizer):
-        self.dataset_name = dataset_name,
-        self.model = model,
-        self.hpo = hpo,
-        self.model_name = model.get_model_name
-        self.hpo_name = hpo.get_hpo_name
+        self.dataset_name = dataset_name 
+        self.model = model
+        self.hpo = hpo
+        self.model_name = model().get_model_name()
+        self.hpo_name = hpo().get_hpo_name()
+
+
 
     def run(self):
         # Setup expriment
         experiment = setup_experiment(self.dataset_name, self.model_name, self.hpo_name)
         logger = None
         # Load and process data
-        dataLoader = DatasetLoader(get_config_by_name('loading'))
-        df = dataLoader.load_dataset(self.dataset_name)
+        dataLoader = DatasetLoader(load_config("config/data/loading_config.yaml"))
+        df = dataLoader.load_dataset(f'{self.dataset_name}.csv')
         dataPreprocessor = DataPreprocessor(get_config_by_name('preprocessing'))
         df = dataPreprocessor.handle_missing_values(df)
         X, y =dataPreprocessor.separate_features_and_target(df)
@@ -30,13 +32,13 @@ class ExperimentPipeline:
         y = dataPreprocessor.encode_label(y) 
 
         # Optimize
-        model = self.model(get_config_by_name(self.model_name))
+        model: BaseModel = self.model(get_config_by_name(self.model_name))
         hpo:BaseOptimizer = self.hpo(get_config_by_name(self.hpo_name), model, logger)
         objective_function = hpo.objective_function(get_config_by_name('cv'), get_single_scoring(), X,y)
         best_params, ng_score = hpo.optimize(objective_function)
         score = -ng_score
         # Evaluate Final Model
-        evaluation = evaluate_model_cv_mean(model, X, y, get_config_by_name('cv'), get_multi_scoring())
+        evaluation = evaluate_model_cv_mean(model.set_params(**best_params).model, X, y, get_config_by_name('cv'), get_multi_scoring())
         # Save Experiment Results
         experiment.finish(best_params,score,evaluation)
 
