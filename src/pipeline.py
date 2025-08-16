@@ -20,11 +20,11 @@ class ExperimentPipeline:
     def run(self):
         # Setup expriment
         experiment = setup_experiment(self.dataset_name, self.model_name, self.hpo_name)
-        logger = None
+        logger = experiment.logger
         # Load and process data
-        dataLoader = DatasetLoader(load_config("config/data/loading_config.yaml"))
+        dataLoader = DatasetLoader(load_config("config/data/loading_config.yaml"),logger)
         df = dataLoader.load_dataset(f'{self.dataset_name}.csv')
-        dataPreprocessor = DataPreprocessor(get_config_by_name('preprocessing'))
+        dataPreprocessor = DataPreprocessor(get_config_by_name('preprocessing'), logger)
         df = dataPreprocessor.handle_missing_values(df)
         X, y =dataPreprocessor.separate_features_and_target(df)
         X = dataPreprocessor.select_features(X)

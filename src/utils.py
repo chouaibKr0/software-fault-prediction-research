@@ -13,7 +13,8 @@ def get_project_root() -> Path:
     """Get the root directory of the project."""
     return Path(__file__).parent.parent
 
-
+def get_relative_path(path : str| Path) -> str | Path:
+    return path
 
 def setup_logging(log_level: str = "INFO", log_dir: str = "experiments/logs") -> logging.Logger:
     """

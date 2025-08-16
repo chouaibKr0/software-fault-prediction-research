@@ -7,17 +7,19 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from typing import Dict, Optional, Any
 from pathlib import Path
 from ..utils import load_config
+import logging
+
 
 class DataPreprocessor:
     """Class for preprocessing loaded dataset"""
 
     DEFAULT_CONFIG_PATH: Optional[Path] = Path("config/data/preprocessing_config.yaml")
 
-    def __init__(self, config:Optional[Dict[str, Any]]=None):
+    def __init__(self, config:Optional[Dict[str, Any]]=None, logger: logging.Logger =None):
         self.config = config
         if config == None and self.DEFAULT_CONFIG_PATH != None:
                self.config = load_config(self.DEFAULT_CONFIG_PATH)
-                    
+        self.logger = logger            
     
     def handle_missing_values(self, df: pd.DataFrame, categorical_strategy: str = 'drop') -> pd.DataFrame:
         """
@@ -34,8 +36,10 @@ class DataPreprocessor:
             pd.DataFrame: DataFrame with missing values imputed.
         
         """
+        self.logger.info("")
         strategy = self.config.get('missing_values',{}).get('strategy', 'median')
         if df.isnull().sum().sum() == 0:
+            self.logger.info("Handelling missing values: No missing values found")
             return df
             
         
@@ -60,7 +64,7 @@ class DataPreprocessor:
                 df_imputed[categorical_cols] = self.fitted_transformers['categorical_imputer'].fit_transform(df_imputed[categorical_cols])
             else:
                 df_imputed[categorical_cols] = self.fitted_transformers['categorical_imputer'].transform(df_imputed[categorical_cols])
-        
+        self.logger.info(f"Handelling missing values: Strategy is {strategy}")
         return df_imputed
         
     def separate_features_and_target(self, df: pd.DataFrame, target_column: Optional[str]= None) -> Tuple[pd.DataFrame, pd.Series]:
@@ -87,6 +91,7 @@ class DataPreprocessor:
                 raise ValueError(f"Target column '{target_column}' not found in dataset")
             X = df.drop(columns=[target_column]).copy()
             y = df[target_column].copy()
+        self.logger.info("Separating the features and target variable from the DataFrame")
         return X,y
     
     def select_features(self, X: pd.DataFrame) -> pd.DataFrame:
@@ -107,7 +112,9 @@ class DataPreprocessor:
         
         # Select only specified features
         X_selected = X[selected_features]
-        
+        self.logger.info("Selects a subset of features from the input DataFrame based on the configuration")
+        self.logger.info(f"Selected features: {selected_features}")
+   
         return X_selected
     
     def scale_features(self, X: pd.DataFrame) -> pd.DataFrame:
@@ -132,6 +139,8 @@ class DataPreprocessor:
         X_scaled = X.copy()
         X_scaled[numeric_cols] = scaler.fit_transform(X[numeric_cols])
 
+        self.logger.info(f"Scaling numeric features using {method} method")
+
         return    X_scaled
 
     def encode_label(self, y: pd.Series) -> pd.Series:
@@ -148,4 +157,5 @@ class DataPreprocessor:
 
         le = LabelEncoder()
         y_encoded = le.fit_transform(y)
+        self.logger.info("Encoding Target")
         return y_encoded

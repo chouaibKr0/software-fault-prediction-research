@@ -6,9 +6,11 @@ from . import sso_decoder
 from ..evaluation.cross_validation import evaluate_model_cv_mean
 from typing import Dict, Any, Tuple, Optional
 from pathlib import Path
+import logging
+
 class SalpSwarmOptimizer(BaseOptimizer):
     
-    def __init__(self, config=None, model=None, logger=None):
+    def __init__(self, config=None, model=None, logger: logging.Logger=None):
         self.DEFAULT_CONFIG_PATH = Path("config/hpo/sso_config.yaml")
         super().__init__(config, model, logger)
         
