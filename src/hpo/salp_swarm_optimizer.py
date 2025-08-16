@@ -231,6 +231,12 @@ class SalpSwarmOptimizer(BaseOptimizer):
         Returns:
             Tuple of (best_parameters, best_fitness)
         """
+        self.logger.info("-" * 80)
+        self.logger.info(f"Starting SSO")
+        self.logger.info(f"Model: {self.model}")
+        self.logger.info(f"Max interations: {self.max_iter}, Number of salps: {self.num_salps}")
+        self.logger.info(f"Strategy: {self.strategy}")
+        self.logger.info(f"Transfomation function: {self.transformation_function}")  
         # Setup optimization
         search_space = self.get_search_space(self.model)
         self._setup_optimization(search_space)
@@ -245,14 +251,21 @@ class SalpSwarmOptimizer(BaseOptimizer):
                 return float('inf')
         
         # Initialize best solution by evaluating initial positions
+        self.logger.info(f"Iteration 1/{self.max_iter}: current best: {-self.food_fitness}")
         for i in range(self.num_salps):
             fitness = -_objective_fn(self.positions[i])
+
+
             if fitness < self.food_fitness:
+                self.logger.info(f"Salp {i+1}: {-fitness} -New best")
                 self.food_fitness = fitness
                 self.food_position = self.positions[i].copy()
+            else:
+                self.logger.info(f"Salp {i+1}: {-fitness}")
         
         # Main optimization loop
         for t in range(self.max_iter):
+            self.logger.info(f"Iteration {t+1}/{self.max_iter}: current best: {-self.food_fitness}")
             # Calculate decreasing coefficient
             c1 = 2 * math.exp(-((4 * t / self.max_iter) ** 2))
             
@@ -274,19 +287,22 @@ class SalpSwarmOptimizer(BaseOptimizer):
                 
                 # Update best solution
                 if fitness < self.food_fitness:
+                    self.logger.info(f"Salp {i+1}: {-fitness} -New best")
                     self.food_fitness = fitness
                     self.food_position = self.positions[i].copy()
+                else:
+                    self.logger.info(f"Salp {i+1}: {-fitness}")
             
             # Optional local search for hybrid strategy
             if self.strategy == "hybrid" and t >= self.max_iter / 2:
+                self.logger("Runnig Brownian local search")
                 self._brownian_local_search(_objective_fn)
             
-            # Log progress
-            if self.logger and t % (self.max_iter // 10) == 0:
-                self.logger.info(f"SSO Iteration {t}: Best fitness = {self.food_fitness:.6f}")
+
         
         # Save and return best solution
         self._best_params = self._decode_position(self.food_position)
+        self.logger.info("-" * 80)
         return self._best_params, self.food_fitness
     
     def get_best_params(self) -> Optional[Dict[str, Any]]:
@@ -383,6 +399,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
     def _brownian_local_search(self, _objective_fn):
         """Brownian motion-based local search around best solution."""
         try:
+
             # Generate Brownian motion step
             brownian = np.random.normal(0, 1, self.dim)
             step_size = 0.01 * (self.ub - self.lb)
@@ -394,6 +411,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
             
             # Update if better
             if fitness < self.food_fitness:
+                self.logger(f"Brownian local search: {-fitness} -New best")
                 self.food_fitness = fitness
                 self.food_position = candidate.copy()
                 

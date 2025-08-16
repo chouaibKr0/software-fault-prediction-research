@@ -13,8 +13,23 @@ def get_project_root() -> Path:
     """Get the root directory of the project."""
     return Path(__file__).parent.parent
 
-def get_relative_path(path : str| Path) -> str | Path:
-    return path
+from pathlib import Path
+
+def get_relative_path(path: str | Path) -> Path:
+    """
+    Return `path` relative to the project root.
+    If `path` is outside the project, returns the original path unchanged.
+    """
+    project_root = get_project_root().resolve()
+    p = Path(path).resolve()
+
+    try:
+        # If p is inside project_root, this yields the relative subpath
+        return p.relative_to(project_root)
+    except ValueError:
+        # If p is not under project_root, return as-is (or decide to error)
+        return p
+
 
 def setup_logging(log_level: str = "INFO", log_dir: str = "experiments/logs") -> logging.Logger:
     """

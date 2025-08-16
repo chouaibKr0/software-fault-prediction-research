@@ -9,7 +9,7 @@ import numpy as np
 import json
 import random
 from dataclasses import dataclass, asdict
-from .utils import get_config_by_name, get_project_root
+from .utils import get_config_by_name, get_project_root, get_relative_path
 
 @dataclass
 class ExperimentResult:
@@ -258,7 +258,7 @@ class MLExperiment:
             with open(artifacts_path, 'w') as f:
                 json.dump(additional_artifacts, f, indent=2, default=str)
         
-        self.logger.info(f"Results saved to: {self.directories['results']}")
+        self.logger.info(f"Results saved to: {get_relative_path(self.directories['results'])}")
 
 
 def setup_experiment(dataset_name: str, model_name: str, hpo_name: str, 
