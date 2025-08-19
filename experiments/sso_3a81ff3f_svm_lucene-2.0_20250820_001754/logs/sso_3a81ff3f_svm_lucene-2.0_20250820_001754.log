@@ -1,0 +1,33 @@
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - MLflow tracking enabled: mlruns
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - ================================================================================
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - STARTING ML EXPERIMENT: sso_3a81ff3f_svm_lucene-2.0_20250820_001754
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Dataset: lucene-2.0
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Model: svm
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - HPO Method: sso
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Start Time: 2025-08-20 00:17:55.035249
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - ================================================================================
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Loading lucene-2.0.csv dataset from data/PROMISE/interim
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Dataset loaded succesufully
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - 
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Handelling missing values: No missing values found
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Separating the features and target variable from the DataFrame
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Scaling numeric features using standard method
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Encoding Target
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - --------------------------------------------------------------------------------
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Starting SSO
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f53e420c400>
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Max interations: 40, Number of salps: 30
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Strategy: basic
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Transfomation function: baseline
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Iteration 1/40: current best: -inf
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 1: 0.7316624895572265 -New best
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 2: 0.7706627680311889 -New best
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 3: 0.7537788916736285
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 4: 0.75166805903648
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 5: 0.7553550543024228
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 6: 0.7224839877471456
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 7: 0.765388471177945
+2025-08-20 00:17:55 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 8: 0.7696157059314954
+2025-08-20 00:17:56 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 9: 0.765388471177945
+2025-08-20 00:17:56 - experiment_sso_3a81ff3f_svm_lucene-2.0_20250820_001754 - INFO - Salp 10: 0.7568922305764411
