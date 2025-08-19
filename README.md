@@ -277,27 +277,27 @@ Configuration files are located in the config/ directory:
 Example:
 base_config.yaml contains global experiment settings.
 📂 Project Architecture
-
-project_root/
-├── config/
-│   ├── data/
-│   ├── evaluation/
-│   ├── hpo/
-│   ├── model/
-│   └── base_config.yaml
-├── data/                  # Datasets
-├── src/
-│   ├── data/
-│   ├── evaluation/
-│   ├── hpo/
-│   ├── models/
-│   ├── pipeline.py
-│   └── utils.py
-├── tests/
-│   ├── salp_swarm_optimizer.py
-│   └── test.py
-└── README.md
-
+```
+  project_root/
+  ├── config/
+  │   ├── data/
+  │   ├── evaluation/
+  │   ├── hpo/
+  │   ├── model/
+  │   └── base_config.yaml
+  ├── data/                  # Datasets
+  ├── src/
+  │   ├── data/
+  │   ├── evaluation/
+  │   ├── hpo/
+  │   ├── models/
+  │   ├── pipeline.py
+  │   └── utils.py
+  ├── tests/
+  │   ├── salp_swarm_optimizer.py
+  │   └── test.py
+  └── README.md
+```
 📊 Datasets
 
     Works with 40+ datasets for software defect prediction.
@@ -328,3 +328,4 @@ This project is licensed under the MIT License — see the LICENSE file for deta
     Karbala Chouaib — xxxxxxx@gmail.com
 
 <p align="center">⭐ If you like this project, don't forget to give it a star on GitHub!</p>
+
