@@ -105,16 +105,19 @@ class DataPreprocessor:
         Returns:
             pd.DataFrame: DataFrame containing only the selected features.
         """
+        if not self.config.get("feature_selection",{}).get("enabled", False):
+            self.logger.warning("Feature selection: Disabled in config, proceed without feature selction")
+            return X
         selected_features = self.config.get("feature_selection", {}).get("selected_features", [
     "wmc", "max_cc", "loc", "cbo", "lcom", "rfc", "ca", "ce", "noc", "lcom3"])
         if not selected_features:
+            self.logger.warning("Feature selection: No subset of features is specified, proceed without feature selction")
             return X
         
         # Select only specified features
         X_selected = X[selected_features]
-        self.logger.info("Selects a subset of features from the input DataFrame based on the configuration")
-        self.logger.info(f"Selected features: {selected_features}")
-   
+        self.logger.info("Feature selection: Enabled")
+        self.logger.info(f"Feature selection: Selected features: {selected_features}")
         return X_selected
     
     def scale_features(self, X: pd.DataFrame) -> pd.DataFrame:

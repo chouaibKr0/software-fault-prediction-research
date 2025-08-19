@@ -257,7 +257,7 @@ class MLExperiment:
             artifacts_path = self.directories['results'] / 'additional_artifacts.json'
             with open(artifacts_path, 'w') as f:
                 json.dump(additional_artifacts, f, indent=2, default=str)
-        
+                
         self.logger.info(f"Results saved to: {get_relative_path(self.directories['results'])}")
 
 

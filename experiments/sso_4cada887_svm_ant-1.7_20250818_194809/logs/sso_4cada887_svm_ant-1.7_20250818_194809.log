@@ -1,0 +1,97 @@
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - MLflow tracking enabled: mlruns
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - ================================================================================
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - STARTING ML EXPERIMENT: sso_4cada887_svm_ant-1.7_20250818_194809
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Dataset: ant-1.7
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Model: svm
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - HPO Method: sso
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Start Time: 2025-08-18 19:48:10.522031
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - ================================================================================
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Loading ant-1.7.csv dataset from data/PROMISE/interim
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Dataset loaded succesufully
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - 
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Handelling missing values: No missing values found
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Separating the features and target variable from the DataFrame
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Scaling numeric features using standard method
+2025-08-18 19:48:10 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Encoding Target
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - --------------------------------------------------------------------------------
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Starting SSO
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f74b11e0640>
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Max interations: 10, Number of salps: 5
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Strategy: basic
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Transfomation function: baseline
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 1/10: current best: -inf
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.7221357503066649 -New best
+2025-08-18 19:48:11 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8223580455761426 -New best
+2025-08-18 19:48:12 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.8081886062316436
+2025-08-18 19:48:12 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7983398942240111
+2025-08-18 19:48:13 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.8062602121399193
+2025-08-18 19:48:13 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 1/10: current best: 0.8223580455761426
+2025-08-18 19:48:16 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.8063124587438901
+2025-08-18 19:48:17 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8087844847629662
+2025-08-18 19:48:17 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.7646712339017657
+2025-08-18 19:48:18 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7743938859447281
+2025-08-18 19:48:18 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.8214453468452939
+2025-08-18 19:48:18 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 2/10: current best: 0.8223580455761426
+2025-08-18 19:48:18 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.807413672842723
+2025-08-18 19:48:19 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.6382875139970123
+2025-08-18 19:48:19 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.704466082466788
+2025-08-18 19:48:20 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7743004968104182
+2025-08-18 19:48:20 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7756830942817361
+2025-08-18 19:48:20 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 3/10: current best: 0.8223580455761426
+2025-08-18 19:48:20 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.817953242630022
+2025-08-18 19:48:21 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.7839399017069006
+2025-08-18 19:48:21 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.6348435675210523
+2025-08-18 19:48:22 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7726377452984737
+2025-08-18 19:48:22 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7760577331655027
+2025-08-18 19:48:22 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 4/10: current best: 0.8223580455761426
+2025-08-18 19:48:22 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.8224278235213944 -New best
+2025-08-18 19:48:23 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.7764417122989307
+2025-08-18 19:48:23 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.7766543599857825
+2025-08-18 19:48:23 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7736521712405829
+2025-08-18 19:48:24 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7762325521731113
+2025-08-18 19:48:24 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 5/10: current best: 0.8224278235213944
+2025-08-18 19:48:24 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.821485193232261
+2025-08-18 19:48:24 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8237252229500223 -New best
+2025-08-18 19:48:25 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.7730705101994457
+2025-08-18 19:48:25 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.77481145790741
+2025-08-18 19:48:25 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7741507053959651
+2025-08-18 19:48:25 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 6/10: current best: 0.8237252229500223
+2025-08-18 19:48:26 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.8240332240296964 -New best
+2025-08-18 19:48:26 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8240332240296964
+2025-08-18 19:48:26 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.7745306758385513
+2025-08-18 19:48:27 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7728354004815773
+2025-08-18 19:48:27 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7766486810070901
+2025-08-18 19:48:27 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 7/10: current best: 0.8240332240296964
+2025-08-18 19:48:27 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.8239809774257256
+2025-08-18 19:48:28 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8239831688433858
+2025-08-18 19:48:28 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.824085470633667 -New best
+2025-08-18 19:48:28 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7750162351979091
+2025-08-18 19:48:29 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7747754732259539
+2025-08-18 19:48:29 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 8/10: current best: 0.824085470633667
+2025-08-18 19:48:29 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.8240332240296964
+2025-08-18 19:48:29 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.824084374924837
+2025-08-18 19:48:29 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.8232071397456352
+2025-08-18 19:48:30 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.774616715706318
+2025-08-18 19:48:30 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7730705101994457
+2025-08-18 19:48:30 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 9/10: current best: 0.824085470633667
+2025-08-18 19:48:30 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.824085470633667
+2025-08-18 19:48:31 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8230503999337231
+2025-08-18 19:48:31 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.8229448110169514
+2025-08-18 19:48:31 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7745829224425221
+2025-08-18 19:48:32 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7742994011015882
+2025-08-18 19:48:32 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Iteration 10/10: current best: 0.824085470633667
+2025-08-18 19:48:32 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 1: 0.824085470633667
+2025-08-18 19:48:32 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 2: 0.8237241272411921
+2025-08-18 19:48:33 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 3: 0.823776373845163
+2025-08-18 19:48:33 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 4: 0.7673106094011818
+2025-08-18 19:48:33 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Salp 5: 0.7745383458003618
+2025-08-18 19:48:33 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - --------------------------------------------------------------------------------
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Results saved to: experiments/sso_4cada887_svm_ant-1.7_20250818_194809/results
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - --------------------------------------------------------------------------------
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - EXPERIMENT COMPLETED: sso_4cada887_svm_ant-1.7_20250818_194809
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Duration: 23.76 seconds
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Best Score: 0.824085
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Best Params: {'C': 0.002261868723003601, 'kernel': 'linear', 'gamma': 13.469322486919333, 'degree': 6, 'coef0': -0.03463850678787999}
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - Evaluation Metrics: {'roc_auc': np.float64(0.824085470633667), 'average_precision': np.float64(0.6338462635976759), 'f1': np.float64(0.5601575098000052), 'balanced_accuracy': np.float64(0.724113825440221), 'matthews_corrcoef': np.float64(0.4287536955153506), 'recall': np.float64(0.6019607843137255), 'precision': np.float64(0.5289779326364693), 'neg_log_loss': np.float64(-0.40472440845982227)}
+2025-08-18 19:48:34 - experiment_sso_4cada887_svm_ant-1.7_20250818_194809 - INFO - ================================================================================

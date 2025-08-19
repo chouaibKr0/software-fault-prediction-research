@@ -1,0 +1,15 @@
+artifact_uri: /home/chouaib/Code/rxu001/mlruns/858592792490260770/2f3cda1889f04ad3ad46f265694f55ba/artifacts
+end_time: 1755544485584
+entry_point_name: ''
+experiment_id: '858592792490260770'
+lifecycle_stage: active
+run_id: 2f3cda1889f04ad3ad46f265694f55ba
+run_name: sso_ca49f6f4_svm_ant-1.7_20250818_200653
+run_uuid: 2f3cda1889f04ad3ad46f265694f55ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755544014854
+status: 3
+tags: []
+user_id: chouaib

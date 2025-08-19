@@ -1,0 +1,36 @@
+{
+  "experiment_id": "sso_ca49f6f4_svm_ant-1.7_20250818_203759",
+  "dataset_name": "ant-1.7",
+  "model_name": "svm",
+  "hpo_name": "sso",
+  "hpo_config_hash": "ca49f6f4",
+  "start_time": "2025-08-18T20:37:59.941635",
+  "end_time": "2025-08-18T20:46:34.688972",
+  "optimization_time_seconds": 514.747337,
+  "best_params": {
+    "C": 0.006537180826072238,
+    "kernel": "poly",
+    "gamma": 0.06255365241463882,
+    "degree": 4,
+    "coef0": 0.3810118358550536
+  },
+  "best_score": 0.8312684566807504,
+  "evaluation_metrics": {
+    "roc_auc": 0.8312684566807504,
+    "average_precision": 0.6303597560416596,
+    "f1": 0.3653504426727053,
+    "balanced_accuracy": 0.6099760280287664,
+    "matthews_corrcoef": 0.3606725416815895,
+    "recall": 0.24064171122994654,
+    "precision": 0.7766594516594517,
+    "neg_log_loss": -0.4762598912374517
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true
+  }
+}
