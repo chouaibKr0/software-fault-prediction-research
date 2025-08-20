@@ -1,0 +1,4 @@
+cross_validation:
+  method: stratified_kfold
+  n_splits: 10     # Number of folds
+  shuffle: true   # Shuffle data before splitting
