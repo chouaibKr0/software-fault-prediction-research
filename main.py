@@ -3,6 +3,7 @@ import warnings
 from src.pipeline import ExperimentPipeline
 from src.models.svm import SVM_Wrapper 
 from src.hpo.salp_swarm_optimizer import SalpSwarmOptimizer
+from src.hpo.asso import ASSO
 warnings.filterwarnings('ignore')
 
 def get_model_class(model_name: str):
@@ -22,7 +23,8 @@ def get_model_class(model_name: str):
 def get_hpo_class(hpo_name: str):
     """Map HPO name to HPO class."""
     hpo_mapping = {
-        'sso' : SalpSwarmOptimizer
+        'sso' : SalpSwarmOptimizer,
+        'asso' :  ASSO
     }
     
     hpo_name = hpo_name.lower()

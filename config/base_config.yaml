@@ -11,3 +11,6 @@ data_path: "data"
 
 # Mlflow
 use_mlflow: true
+
+# n jobs
+n_jobs: 1
