@@ -15,6 +15,7 @@ import signal
 import numpy as np
 
 class TimeoutException(Exception):
+    
     pass
 
 def timeout_handler(signum, frame):
