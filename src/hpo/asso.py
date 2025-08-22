@@ -10,13 +10,15 @@ from ..evaluation.cross_validation import evaluate_model_cv_mean
 from typing import Dict, Any, Tuple, Optional
 from pathlib import Path
 import logging
-import concurrent.futures as cf
-import traceback
 
-def _run_eval(model, X, y, config, objective_metric):
-    # This helper runs in a separate process
-    scores = evaluate_model_cv_mean(model, X, y, cv_config=config, scoring=objective_metric)
-    return float(scores.get(objective_metric, float('inf')))
+import signal
+import numpy as np
+
+class TimeoutException(Exception):
+    pass
+
+def timeout_handler(signum, frame):
+    raise TimeoutException()
 
 class ASSO(BaseOptimizer):
     def __init__(self, config=None, model=None, logger: logging.Logger = None):
@@ -165,33 +167,30 @@ class ASSO(BaseOptimizer):
                 result[name] = param["choices"][0]
         return result
 
-    def objective_function(self, config, objective_metric, X, y, timeout_seconds=60):
+
+
+    def objective_function(self, config, objective_metric, X, y, timeout=60):
         """Create objective function for cross-validation evaluation with timeout."""
         def objective_fn(**param):
+            # Set up the timeout signal
+            signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(timeout)  # timeout in seconds
+            
             try:
                 model = self.model.set_params(**param).model
-                # Use a separate process to allow hard timeout
-                with cf.ProcessPoolExecutor(max_workers=1) as ex:
-                    fut = ex.submit(_run_eval, model, X, y, config, objective_metric)
-                    try:
-                        result = fut.result(timeout=timeout_seconds)
-                        # Ensure numpy-compatible float
-                        return np.float64(result)
-                    except cf.TimeoutError:
-                        self.logger.warning(
-                            f"Evaluation timed out after {timeout_seconds}s for params={param}"
-                        )
-                        # Best-effort: cancel/kill worker process by shutting down executor
-                        ex.shutdown(cancel_futures=True)
-                        return float('inf')
-                    except Exception as e:
-                        self.logger.warning(
-                            f"Failed to evaluate parameters: {e}\n{traceback.format_exc()}"
-                        )
-                        return float('inf')
-            except Exception as e_outer:
-                self.logger.warning(f"Failed to prepare model: {e_outer}")
+                scores = evaluate_model_cv_mean(model, X, y, cv_config=config, scoring=objective_metric)
+                signal.alarm(0)  # Disable alarm if successful
+                return np.float64(scores.get(objective_metric, float('inf')))
+            except TimeoutException:
+                self.logger.warning(f"Evaluation timed out after {timeout} seconds, returning inf")
                 return float('inf')
+            except Exception as e:
+                signal.alarm(0)  # Disable alarm on other exceptions
+                self.logger.warning(f"Failed to evaluate parameters: {e}")
+                return float('inf')
+            finally:
+                signal.alarm(0)  # Ensure alarm is always disabled
+                
         return objective_fn
 
     def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:
