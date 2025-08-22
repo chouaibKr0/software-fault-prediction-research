@@ -142,6 +142,7 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
     from .data.preprocessor import DataPreprocessor
     from .evaluation import cross_validation
     from .hpo.salp_swarm_optimizer import SalpSwarmOptimizer
+    from .hpo.asso import ASSO
     from .models.svm import SVM_Wrapper 
     config_name = configuration_name
 
@@ -149,6 +150,7 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
         'data_loader': DatasetLoader,
         'data_preprocessor': DataPreprocessor,
         'salp_swarm_optimizer': SalpSwarmOptimizer,
+        'asso': ASSO,
         'svm': SVM_Wrapper
     }
 
@@ -160,7 +162,9 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
         'data_preprocessing': 'data_preprocessor', 
         'sso': 'salp_swarm_optimizer',
         'ssa': 'salp_swarm_optimizer',
-        'salp_swarm_algorithm':'salp_swarm_optimizer'
+        'salp_swarm_algorithm':'salp_swarm_optimizer',
+        'amended_salp_swarm_optimizer': 'asso',
+        'amended_sso': 'asso'
     }    
     def get_class_by_name(name: str):
         """
