@@ -29,7 +29,7 @@ def get_hpo_class(hpo_name: str):
     
     hpo_name = hpo_name.lower()
     if hpo_name not in hpo_mapping:
-        available_hpo = 'sso' #', '.join([k for k in hpo_mapping.keys() if k != 'no_hpo'])
+        available_hpo = 'sso, asso' #', '.join([k for k in hpo_mapping.keys() if k != 'no_hpo'])
         raise ValueError(f'HPO method "{hpo_name}" not supported. Available methods: {available_hpo}')
     
     return hpo_mapping[hpo_name]
