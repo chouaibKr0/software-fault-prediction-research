@@ -283,7 +283,10 @@ base_config.yaml contains global experiment settings.
 
     Karbala Chouaib — karballac@gmail.com
 
+    Charane Mohamed Ilies - mohamediliesc@gmail.com
+
 <p align="center">⭐ If you like this project, don't forget to give it a star on GitHub!</p>
+
 
 
 
