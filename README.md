@@ -101,7 +101,7 @@ Leverage **population-based metaheuristics** to make defect identification **acc
 - **Ouraou Mohamed Abdelillah**  
 
 
-- **Charaane Mohamed Illies**  
+- **Charane Mohamed Ilies**  
 
 
 - **Mernache Mohamed Amine**
@@ -284,5 +284,6 @@ base_config.yaml contains global experiment settings.
     Karbala Chouaib — karballac@gmail.com
 
 <p align="center">⭐ If you like this project, don't forget to give it a star on GitHub!</p>
+
 
 
