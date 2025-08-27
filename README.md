@@ -80,7 +80,7 @@ It delivers an **automated software fault prediction system** that:
 **🎯 Main Goal:**  
 
 
-Leverage **evolutionary optimization** to make defect identification **faster, more robust, and effective** in real-world software engineering.
+Leverage **population-based metaheuristics** to make defect identification **accurate, more robust, and effective** in real-world software engineering.
 
 
 
@@ -104,7 +104,7 @@ Leverage **evolutionary optimization** to make defect identification **faster, m
 - **Charaane Mohamed Illies**  
 
 
-- **Mohamed Amine XXXXX**
+- **Mernache Mohamed Amine**
 
 
 
@@ -119,34 +119,25 @@ Leverage **evolutionary optimization** to make defect identification **faster, m
 ## 📌 Table of Contents
 
 
-1. [✨ Features](#-features)  
+1. [🛠 Tech Stack](#-tech-stack)  
 
 
-2. [🛠 Tech Stack](#-tech-stack)  
+2. [📥 Installation](#-installation)  
 
 
-3. [📥 Installation](#-installation)  
+3. [🚀 Usage](#-usage)  
 
 
-4. [🚀 Usage](#-usage)  
+4. [⚙ Configuration](#-configuration)  
 
 
-5. [⚙ Configuration](#-configuration)  
+5. [📂 Project Architecture](#-project-architecture)  
 
 
-6. [📂 Project Architecture](#-project-architecture)  
+6. [📊 Datasets](#-datasets)  
 
 
-7. [📊 Datasets](#-datasets)  
-
-
-8. [🧪 Testing](#-testing)  
-
-
-9. [📜 License](#-license)  
-
-
-10. [📬 Contact](#-contact)  
+7. [📬 Contact](#-contact)  
 
 
 
@@ -191,36 +182,15 @@ Leverage **evolutionary optimization** to make defect identification **faster, m
 ## 🛠 Tech Stack
 
 
-- **Language:** Python 3.x  
+- **Language:** Python 3
 
 
 - **Core Libraries:**  
 
-
-  - `numpy`  
-
-
-  - `math`  
-
-
-  - `random` (native)  
-
-
-  - `typing`  
-
-
-  - Custom modules:  
-
-
-    - `src.hpo.base_optimizer`  
-
-
-    - `src.hpo.sso_decoder`  
-
-
-    - `src.evaluation.cross_validation`  
-
-
+  - `PyYAML`
+  - `numpy`
+  - `pandas`
+  - `scikit-learn`
 
 
 
@@ -234,34 +204,31 @@ Leverage **evolutionary optimization** to make defect identification **faster, m
 Prerequisites
 
     Python 3.8+ (tested on 3.11)
-
     pip package manager
+    miniconda (preferred)
 
 Setup
 
-# Clone the repository
-git clone https://github.com/yourusername/software-fault-prediction-ssa-svm.git
+1. Clone the repository
 
-# Navigate to project directory
+
+2. Navigate to project directory
 cd software-fault-prediction-ssa-svm
 
-# Install dependencies
+3. Install dependencies
 pip install -r requirements.txt
 
 🚀 Usage
 
-Run a fault prediction experiment:
-
-python src/pipeline.py --config config/base_config.yaml
-
-Workflow:
-
-    Place datasets in the data/ folder.
-
-    Set experiment configs in config/*.yaml.
-
-    Run the pipeline with your chosen config file.
-
+Run a fault prediction experiment: 
+**Usage**
+```bash
+ python main.py --model MODEL_NAME --hpo OPTIMIZER_NAME --dataset DATASET_NAME
+```
+**Example:** 
+```bash
+ python main.py --model svm --hpo sso --dataset ant-1.7
+```
 ⚙ Configuration
 
 Configuration files are located in the config/ directory:
@@ -270,7 +237,7 @@ Configuration files are located in the config/ directory:
 
     Model → config/model/
 
-    HPO (SSA) → config/hpo/
+    HPO → config/hpo/
 
     Evaluation → config/evaluation/
 
@@ -306,26 +273,16 @@ base_config.yaml contains global experiment settings.
 
     Place datasets inside data/ following naming conventions.
 
-🧪 Testing
 
-Run all tests:
 
-python tests/test.py
-
-Run SSA-specific tests:
-
-python tests/salp_swarm_optimizer.py
-
-📜 License
-
-This project is licensed under the MIT License — see the LICENSE file for details.
 📬 Contact
 
 💌 For inquiries, feedback, or collaborations:
 
     Ouraou Mohamed Abdelillah — abdelillah.ouraou@email.com
 
-    Karbala Chouaib — xxxxxxx@gmail.com
+    Karbala Chouaib — karballac@gmail.com
 
 <p align="center">⭐ If you like this project, don't forget to give it a star on GitHub!</p>
+
 
