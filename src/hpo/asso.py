@@ -194,7 +194,7 @@ class ASSO(BaseOptimizer):
         self.food_fitness = float('inf')
         self.logger.info(f"Initialization: evaluating {self.num_salps} salps")
         for i in range(self.num_salps):
-            fitness = _objective_fn(self.positions[i])
+            fitness = -_objective_fn(self.positions[i])
             if fitness < self.food_fitness:
                 self.food_fitness = fitness
                 self.food_position = self.positions[i].copy()
@@ -238,7 +238,7 @@ class ASSO(BaseOptimizer):
                 self.positions[i] = np.clip(self.positions[i], self.lb, self.ub)
 
                 # Evaluate and update best
-                fitness = _objective_fn(self.positions[i])
+                fitness = -_objective_fn(self.positions[i])
                 if fitness < self.food_fitness:
                     self.food_fitness = fitness
                     self.food_position = self.positions[i].copy()
