@@ -3,10 +3,10 @@ import math
 import numpy as np
 import random
 from . import sso_decoder
-from ..evaluation.cross_validation import evaluate_model_cv_mean
 from typing import Dict, Any, Tuple, Optional
 from pathlib import Path
 import logging
+
 
 class SalpSwarmOptimizer(BaseOptimizer):
     
@@ -205,20 +205,7 @@ class SalpSwarmOptimizer(BaseOptimizer):
         
         return result
     
-    def objective_function(self, config, objective_metric, X, y):
-        """Create objective function for cross-validation evaluation."""
-        def objective_fn(**param):
-            try:
-                model = self.model.set_params(**param).model
-                scores = evaluate_model_cv_mean(
-                    model, X, y, cv_config=config, scoring=objective_metric
-                )
-                return np.float64(scores.get(objective_metric, float('inf')))
-            except Exception as e:
-                self.logger.warning(f"Failed to evaluate parameters: {e}")
-                return float('inf')
-        
-        return objective_fn
+
     
     def optimize(self, objective_function) -> Tuple[Dict[str, Any], float]:
         """

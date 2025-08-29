@@ -6,6 +6,8 @@ from .hpo.base_optimizer import BaseOptimizer
 from .data.loader import DatasetLoader
 from .data.preprocessor import DataPreprocessor
 from .evaluation.cross_validation import evaluate_model_cv_mean
+from src.hpo.utils import objective_function_cv_eval_timeout
+
 
 class ExperimentPipeline:
     def __init__(self, dataset_name: str, model: BaseModel, hpo: BaseOptimizer):
@@ -35,6 +37,7 @@ class ExperimentPipeline:
         model: BaseModel = self.model(get_config_by_name(self.model_name))
         hpo:BaseOptimizer = self.hpo(get_config_by_name(self.hpo_name), model, logger)
         objective_function = hpo.objective_function(get_config_by_name('cv'), get_single_scoring(), X,y)
+        objective_function = objective_function_cv_eval_timeout(hpo, get_config_by_name('cv'), get_single_scoring(), X, y, 60)
         best_params, ng_score = hpo.optimize(objective_function)
         score = -ng_score
         # Evaluate Final Model
