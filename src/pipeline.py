@@ -36,7 +36,7 @@ class ExperimentPipeline:
         # Optimize
         model: BaseModel = self.model(get_config_by_name(self.model_name))
         hpo:BaseOptimizer = self.hpo(get_config_by_name(self.hpo_name), model, logger)
-        objective_function = objective_function_cv_eval_timeout(hpo, get_config_by_name('cv'), get_single_scoring(), X, y, 60)
+        objective_function = objective_function_cv_eval_timeout(hpo, get_config_by_name('cv'), get_single_scoring(), X, y, 10)
         best_params, ng_score = hpo.optimize(objective_function)
         score = -ng_score
         # Evaluate Final Model
