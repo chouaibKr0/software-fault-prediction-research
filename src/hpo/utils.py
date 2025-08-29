@@ -9,10 +9,10 @@ def objective_function_cv_eval(self, config, objective_metric, X, y):
             scores = evaluate_model_cv_mean(
                 model, X, y, cv_config=config, scoring=objective_metric
             )
-            return np.float64(scores.get(objective_metric, float('inf')))
+            return np.float64(scores.get(objective_metric, float('-inf')))
         except Exception as e:
             self.logger.warning(f"Failed to evaluate parameters: {e}")
-            return float('inf')
+            return float('-inf')
 
     return objective_fn
 
@@ -23,9 +23,9 @@ def _cv_worker(model_factory, param, X, y, config, objective_metric, out_q):
         # build a fresh model instance to avoid cross-process object issues
         model = model_factory().set_params(**param).model
         scores = evaluate_model_cv_mean(model, X, y, cv_config=config, scoring=objective_metric)
-        out_q.put(np.float64(scores.get(objective_metric, float('inf'))))
+        out_q.put(np.float64(scores.get(objective_metric, float('-inf'))))
     except Exception as e:
-        out_q.put(float('inf'))
+        out_q.put(float('-inf'))
 
 def objective_function_cv_eval_timeout(self, config, objective_metric, X, y, timeout_seconds=60):
     """Create objective function for cross-validation evaluation with a hard 60s timeout."""

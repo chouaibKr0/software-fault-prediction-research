@@ -186,9 +186,9 @@ class ASSO(BaseOptimizer):
             try:
                 params = self._decode_position(position)
                 score = objective_function(**params)
-                return score if not np.isnan(score) else float('inf')
+                return score if not np.isnan(score) else float('-inf')
             except Exception:
-                return float('inf')
+                return float('-inf')
 
         # Evaluate initial swarm and set best (food) solution
         self.food_fitness = float('inf')
@@ -330,7 +330,7 @@ class ASSO(BaseOptimizer):
             candidate = self.food_position + brownian * step_size
             candidate = np.clip(candidate, self.lb, self.ub)
 
-            fitness = _objective_fn(candidate)
+            fitness = -_objective_fn(candidate)
 
             if fitness < self.food_fitness:
                 self.logger.info(f"Brownian local search: {fitness} - New best")

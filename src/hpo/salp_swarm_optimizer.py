@@ -232,11 +232,11 @@ class SalpSwarmOptimizer(BaseOptimizer):
             try:
                 params = self._decode_position(position)
                 score = objective_function(**params)
-                return score if not np.isnan(score) else float('inf')
+                return score if not np.isnan(score) else float('-inf')
             except Exception as e:
                 #self.logger.warning(f"Failed to evaluate position: {e}")
-                return float('inf')
-        
+                return float('-inf')
+
         # Initialize best solution by evaluating initial positions
         self.logger.info(f"Iteration 1/{self.max_iter}: current best: {-self.food_fitness}")
         for i in range(self.num_salps):
