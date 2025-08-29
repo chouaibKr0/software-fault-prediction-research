@@ -198,13 +198,13 @@ class ASSO(BaseOptimizer):
             if fitness < self.food_fitness:
                 self.food_fitness = fitness
                 self.food_position = self.positions[i].copy()
-                self.logger.info(f"Salp {i+1}: {fitness} - New best")
+                self.logger.info(f"Salp {i+1}: {-fitness} - New best")
             else:
-                self.logger.info(f"Salp {i+1}: {fitness}")
+                self.logger.info(f"Salp {i+1}: {-fitness}")
 
         # Main optimization loop (ASSO)
         for t in range(1, self.max_iter + 1):
-            self.logger.info(f"Iteration {t}/{self.max_iter}: current best: {self.food_fitness}")
+            self.logger.info(f"Iteration {t}/{self.max_iter}: current best: {-self.food_fitness}")
 
             # ASSO decreasing coefficient (Eq. 3.2)
             c1 = 2 * math.exp(-((4 * t / self.max_iter) ** 2))
@@ -242,9 +242,9 @@ class ASSO(BaseOptimizer):
                 if fitness < self.food_fitness:
                     self.food_fitness = fitness
                     self.food_position = self.positions[i].copy()
-                    self.logger.info(f"Salp {i+1}: {fitness} - New best")
+                    self.logger.info(f"Salp {i+1}: {-fitness} - New best")
                 else:
-                    self.logger.info(f"Salp {i+1}: {fitness}")
+                    self.logger.info(f"Salp {i+1}: {-fitness}")
 
             # Optional Brownian local search in hybrid strategy after mid-iterations
             if self.strategy == "hybrid" and t >= self.max_iter / 2:
@@ -333,7 +333,7 @@ class ASSO(BaseOptimizer):
             fitness = -_objective_fn(candidate)
 
             if fitness < self.food_fitness:
-                self.logger.info(f"Brownian local search: {fitness} - New best")
+                self.logger.info(f"Brownian local search: {-fitness} - New best")
                 self.food_fitness = fitness
                 self.food_position = candidate.copy()
         except Exception as e:
