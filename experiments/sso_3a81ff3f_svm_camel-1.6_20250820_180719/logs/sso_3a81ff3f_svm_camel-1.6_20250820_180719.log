@@ -1,0 +1,33 @@
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - WARNING - MLflow not installed, proceeding without MLflow tracking
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - ================================================================================
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - STARTING ML EXPERIMENT: sso_3a81ff3f_svm_camel-1.6_20250820_180719
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Dataset: camel-1.6
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Model: svm
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - HPO Method: sso
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Start Time: 2025-08-20 18:07:19.475908
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - ================================================================================
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Loading camel-1.6.csv dataset from data/PROMISE/interim
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Dataset loaded succesufully
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - 
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Handelling missing values: No missing values found
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Separating the features and target variable from the DataFrame
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Scaling numeric features using standard method
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Encoding Target
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - --------------------------------------------------------------------------------
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Starting SSO
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f8e79b4e060>
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Max interations: 40, Number of salps: 30
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Strategy: basic
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Transfomation function: baseline
+2025-08-20 18:07:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Iteration 1/40: current best: -inf
+2025-08-20 18:07:20 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 1: 0.5615010112633203 -New best
+2025-08-20 18:07:20 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 2: 0.6943408669215122 -New best
+2025-08-20 18:07:21 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 3: 0.6367844061901786
+2025-08-20 18:07:21 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 4: 0.6551949638027736
+2025-08-20 18:07:23 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 5: 0.7100017530917362 -New best
+2025-08-20 18:07:24 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 6: 0.6449102687642586
+2025-08-20 18:07:24 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 7: 0.6643306542797205
+2025-08-20 18:07:25 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 8: 0.69237906314307
+2025-08-20 18:07:25 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 9: 0.6637132012514015
+2025-08-20 18:07:26 - experiment_sso_3a81ff3f_svm_camel-1.6_20250820_180719 - INFO - Salp 10: 0.6784754926011293

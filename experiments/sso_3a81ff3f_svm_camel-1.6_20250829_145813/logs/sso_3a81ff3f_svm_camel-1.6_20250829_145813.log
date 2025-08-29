@@ -1,0 +1,148 @@
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - WARNING - MLflow not installed, proceeding without MLflow tracking
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - ================================================================================
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - STARTING ML EXPERIMENT: sso_3a81ff3f_svm_camel-1.6_20250829_145813
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Dataset: camel-1.6
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Model: svm
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - HPO Method: sso
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Start Time: 2025-08-29 14:58:13.167417
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - ================================================================================
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Loading camel-1.6.csv dataset from data/PROMISE/interim
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Dataset loaded succesufully
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - 
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Handelling missing values: No missing values found
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Separating the features and target variable from the DataFrame
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Scaling numeric features using standard method
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Encoding Target
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - --------------------------------------------------------------------------------
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Starting SSO
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f376155a8b0>
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Max interations: 40, Number of salps: 30
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Strategy: basic
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Transfomation function: baseline
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Iteration 1/40: current best: -inf
+2025-08-29 14:58:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 1: 0.5615010112633203 -New best
+2025-08-29 14:58:14 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 2: 0.6943408669215122 -New best
+2025-08-29 14:58:15 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 3: 0.6367844061901786
+2025-08-29 14:58:15 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 4: 0.6551949638027736
+2025-08-29 14:58:17 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 5: 0.7100017530917362 -New best
+2025-08-29 14:58:18 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 6: 0.6449102687642586
+2025-08-29 14:58:18 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 7: 0.6643306542797205
+2025-08-29 14:58:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 8: 0.69237906314307
+2025-08-29 14:58:19 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 9: 0.6637132012514015
+2025-08-29 14:58:20 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 10: 0.6784754926011293
+2025-08-29 14:59:20 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 11: -inf
+2025-08-29 15:00:20 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 12: -inf
+2025-08-29 15:00:21 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 13: 0.6711236729742672
+2025-08-29 15:00:22 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 14: 0.7108264121506906 -New best
+2025-08-29 15:00:23 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 15: 0.673252079296222
+2025-08-29 15:00:23 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 16: 0.6782256593801586
+2025-08-29 15:00:23 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 17: 0.4606411962439127
+2025-08-29 15:00:25 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 18: 0.6208886057273154
+2025-08-29 15:00:28 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 19: 0.5856147292649839
+2025-08-29 15:00:28 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 20: 0.4641934307299332
+2025-08-29 15:00:29 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 21: 0.6659376864130684
+2025-08-29 15:00:30 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 22: 0.6475982996186731
+2025-08-29 15:00:30 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 23: 0.7015237190958753
+2025-08-29 15:00:31 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 24: 0.6683298683298683
+2025-08-29 15:00:32 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 25: 0.6946451989406149
+2025-08-29 15:01:32 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 26: -inf
+2025-08-29 15:01:33 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 27: 0.6636771628622223
+2025-08-29 15:01:35 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 28: 0.6221521495375485
+2025-08-29 15:01:37 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 29: 0.6017222302621283
+2025-08-29 15:01:38 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 30: 0.43601616374112134
+2025-08-29 15:01:38 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Iteration 1/40: current best: 0.7108264121506906
+2025-08-29 15:01:39 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 1: 0.6141279721670214
+2025-08-29 15:01:40 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 2: 0.6326643170531117
+2025-08-29 15:02:40 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 3: 0.5642558360894524
+2025-08-29 15:02:41 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 4: 0.6499763391444205
+2025-08-29 15:02:41 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 5: 0.7021777870334748
+2025-08-29 15:02:42 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 6: 0.7109370098843784 -New best
+2025-08-29 15:02:42 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 7: 0.6862670088136982
+2025-08-29 15:02:43 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 8: 0.6912557431402933
+2025-08-29 15:02:44 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 9: 0.6636425128275724
+2025-08-29 15:02:44 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 10: 0.6856655218624658
+2025-08-29 15:02:45 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 11: 0.5427499185224143
+2025-08-29 15:02:46 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 12: 0.6964585076130068
+2025-08-29 15:02:47 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 13: 0.6383746015834302
+2025-08-29 15:02:47 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 14: 0.6538781448289088
+2025-08-29 15:02:48 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 15: 0.7062679383052898
+2025-08-29 15:02:49 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 16: 0.6925543958481141
+2025-08-29 15:02:49 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 17: 0.6861747420660833
+2025-08-29 15:02:50 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 18: 0.4169803994931329
+2025-08-29 15:02:50 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 19: 0.6039758120403281
+2025-08-29 15:02:51 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 20: 0.46511831016075506
+2025-08-29 15:02:51 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 21: 0.6942037727946047
+2025-08-29 15:02:52 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 22: 0.6512769096640064
+2025-08-29 15:02:53 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 23: 0.6495060752276374
+2025-08-29 15:02:53 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 24: 0.6888022500755947
+2025-08-29 15:02:54 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 25: 0.4844188030266129
+2025-08-29 15:02:54 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 26: 0.4969091580806351
+2025-08-29 15:02:55 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 27: 0.6827065030290836
+2025-08-29 15:02:55 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 28: 0.6983330215418502
+2025-08-29 15:02:56 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 29: 0.6699427950871074
+2025-08-29 15:02:57 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 30: 0.6801283992625249
+2025-08-29 15:02:57 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Iteration 2/40: current best: 0.7109370098843784
+2025-08-29 15:03:30 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 1: 0.7147459134725688 -New best
+2025-08-29 15:03:35 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 2: 0.7115166361346328
+2025-08-29 15:03:37 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 3: 0.6433706541855948
+2025-08-29 15:03:37 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 4: 0.6730764230339782
+2025-08-29 15:03:38 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 5: 0.6713406563151894
+2025-08-29 15:03:39 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 6: 0.6954405260687094
+2025-08-29 15:03:39 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 7: 0.7069338072563879
+2025-08-29 15:03:40 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 8: 0.693392997280943
+2025-08-29 15:03:41 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 9: 0.675197975826159
+2025-08-29 15:03:42 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 10: 0.6835435984502197
+2025-08-29 15:03:42 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 11: 0.7078359200260728
+2025-08-29 15:03:43 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 12: 0.7093314249341415
+2025-08-29 15:03:44 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 13: 0.6498851783741427
+2025-08-29 15:03:44 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 14: 0.6327759325212636
+2025-08-29 15:03:45 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 15: 0.703975941463208
+2025-08-29 15:03:46 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 16: 0.7061951673496666
+2025-08-29 15:03:46 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 17: 0.7085521227117153
+2025-08-29 15:03:47 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 18: 0.3835934497903938
+2025-08-29 15:03:47 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 19: 0.6997836990706261
+2025-08-29 15:03:48 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 20: 0.4770792785733363
+2025-08-29 15:03:48 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 21: 0.711143815880658
+2025-08-29 15:03:49 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 22: 0.5994028193009517
+2025-08-29 15:03:49 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 23: 0.6417036051331467
+2025-08-29 15:03:50 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 24: 0.6528664108799933
+2025-08-29 15:03:50 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 25: 0.5879643781171795
+2025-08-29 15:03:51 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 26: 0.4951011086834517
+2025-08-29 15:03:52 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 27: 0.7119580622806428
+2025-08-29 15:03:53 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 28: 0.6924953319520382
+2025-08-29 15:03:54 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 29: 0.7108413899076039
+2025-08-29 15:03:55 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 30: 0.7027780032873412
+2025-08-29 15:03:55 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Iteration 3/40: current best: 0.7147459134725688
+2025-08-29 15:03:56 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 1: 0.6686230876298789
+2025-08-29 15:03:57 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 2: 0.6619333483934502
+2025-08-29 15:03:58 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 3: 0.6419184471136933
+2025-08-29 15:03:59 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 4: 0.6648484928705642
+2025-08-29 15:04:00 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 5: 0.6530400022590175
+2025-08-29 15:04:01 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 6: 0.6459210438072918
+2025-08-29 15:04:01 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 7: 0.7092177563484865
+2025-08-29 15:04:02 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 8: 0.710454168416817
+2025-08-29 15:04:03 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 9: 0.685530392610189
+2025-08-29 15:04:03 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 10: 0.6837390622959384
+2025-08-29 15:04:04 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 11: 0.7026055061199374
+2025-08-29 15:04:05 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 12: 0.7097028568335869
+2025-08-29 15:04:05 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 13: 0.7035595056987247
+2025-08-29 15:04:06 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 14: 0.6533340981048961
+2025-08-29 15:04:07 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 15: 0.6774470983978624
+2025-08-29 15:04:07 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 16: 0.7099467366020846
+2025-08-29 15:04:08 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 17: 0.7077931163499924
+2025-08-29 15:04:09 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 18: 0.7079629544655013
+2025-08-29 15:04:10 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 19: 0.5228539156892298
+2025-08-29 15:04:11 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 20: 0.4876171012334001
+2025-08-29 15:04:12 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 21: 0.6711790894982745
+2025-08-29 15:04:12 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 22: 0.619736365593751
+2025-08-29 15:04:13 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 23: 0.6114558779754027
+2025-08-29 15:04:14 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 24: 0.6380920832024397
+2025-08-29 15:04:14 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 25: 0.463798255614894
+2025-08-29 15:04:15 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 26: 0.5083201145510144
+2025-08-29 15:04:15 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 27: 0.6658695393839706
+2025-08-29 15:04:16 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 28: 0.6938660614382176
+2025-08-29 15:04:17 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 29: 0.6949339649169869
+2025-08-29 15:04:17 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 30: 0.6937350384209467
+2025-08-29 15:04:17 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Iteration 4/40: current best: 0.7147459134725688
+2025-08-29 15:05:17 - experiment_sso_3a81ff3f_svm_camel-1.6_20250829_145813 - INFO - Salp 1: -inf

@@ -1,0 +1,33 @@
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - WARNING - MLflow not installed, proceeding without MLflow tracking
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - ================================================================================
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - STARTING ML EXPERIMENT: asso_3a81ff3f_svm_camel-1.6_20250827_224033
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Dataset: camel-1.6
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Model: svm
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - HPO Method: asso
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Start Time: 2025-08-27 22:40:33.879155
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - ================================================================================
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Loading camel-1.6.csv dataset from data/PROMISE/interim
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Dataset loaded succesufully
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - 
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Handelling missing values: No missing values found
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Separating the features and target variable from the DataFrame
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Scaling numeric features using standard method
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Encoding Target
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - --------------------------------------------------------------------------------
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Starting SSO (ASSO baseline)
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f73b5515e00>
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Max iterations: 40, Number of salps: 30
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Strategy: basic
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Transformation function: baseline
+2025-08-27 22:40:33 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Initialization: evaluating 30 salps
+2025-08-27 22:40:34 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 1: 0.5615010112633203 - New best
+2025-08-27 22:40:34 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 2: 0.6943408669215122
+2025-08-27 22:40:35 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 3: 0.6367844061901786
+2025-08-27 22:40:36 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 4: 0.6551949638027736
+2025-08-27 22:40:38 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 5: 0.7100017530917362
+2025-08-27 22:40:38 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 6: 0.6449102687642586
+2025-08-27 22:40:39 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 7: 0.6643306542797205
+2025-08-27 22:40:40 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 8: 0.69237906314307
+2025-08-27 22:40:40 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 9: 0.6637132012514015
+2025-08-27 22:40:41 - experiment_asso_3a81ff3f_svm_camel-1.6_20250827_224033 - INFO - Salp 10: 0.6784754926011293
