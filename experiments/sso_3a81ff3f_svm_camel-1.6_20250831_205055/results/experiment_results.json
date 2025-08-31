@@ -1,0 +1,37 @@
+{
+  "experiment_id": "sso_3a81ff3f_svm_camel-1.6_20250831_205055",
+  "dataset_name": "camel-1.6",
+  "model_name": "svm",
+  "hpo_name": "sso",
+  "hpo_config_hash": "3a81ff3f",
+  "start_time": "2025-08-31T20:50:55.902790",
+  "end_time": "2025-08-31T21:04:18.190909",
+  "optimization_time_seconds": 802.288119,
+  "best_params": {
+    "C": 1.226918576878841,
+    "kernel": "rbf",
+    "gamma": 0.03194085606426305,
+    "degree": 4,
+    "coef0": -0.0705533584726172
+  },
+  "best_score": 0.7146224087480455,
+  "evaluation_metrics": {
+    "roc_auc": 0.7146224087480455,
+    "average_precision": 0.3703557964355447,
+    "f1": 0.4141469760842618,
+    "balanced_accuracy": 0.6432787698237614,
+    "matthews_corrcoef": 0.2355531592788287,
+    "recall": 0.6120910384068279,
+    "precision": 0.31554467165064687,
+    "neg_log_loss": -0.45253578195790095
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
