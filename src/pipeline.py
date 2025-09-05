@@ -7,15 +7,17 @@ from .data.loader import DatasetLoader
 from .data.preprocessor import DataPreprocessor
 from .evaluation.cross_validation import evaluate_model_cv_mean
 from src.hpo.utils import objective_function_cv_eval_timeout
+from typing import Dict, Any
 
 
 class ExperimentPipeline:
-    def __init__(self, dataset_name: str, model: BaseModel, hpo: BaseOptimizer):
-        self.dataset_name = dataset_name 
+    def __init__(self, dataset_name: str, model: BaseModel, hpo: BaseOptimizer, hpo_kwargs: Dict[str, Any] = None ):
+        self.dataset_name = dataset_name
         self.model = model
         self.hpo = hpo
         self.model_name = model().get_model_name()
         self.hpo_name = hpo().get_hpo_name()
+        self.hpo_kwargs = hpo_kwargs
 
 
 
@@ -35,7 +37,11 @@ class ExperimentPipeline:
 
         # Optimize
         model: BaseModel = self.model(get_config_by_name(self.model_name))
-        hpo:BaseOptimizer = self.hpo(get_config_by_name(self.hpo_name), model, logger)
+        cfg = get_config_by_name(self.hpo_name).copy()
+        if self.hpo_kwargs is not None:
+            logger.warning(f'Overriding default HPO config with {self.hpo_kwargs}')
+            cfg['optimizer_config'].update(self.hpo_kwargs)
+        hpo:BaseOptimizer = self.hpo(cfg, model, logger)
         objective_function = objective_function_cv_eval_timeout(hpo, get_config_by_name('cv'), get_single_scoring(), X, y, 10)
         best_params, ng_score = hpo.optimize(objective_function)
         score = -ng_score
