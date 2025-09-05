@@ -38,7 +38,7 @@ class ExperimentPipeline:
         # Optimize
         model: BaseModel = self.model(get_config_by_name(self.model_name))
         cfg = get_config_by_name(self.hpo_name).copy()
-        if self.hpo_kwargs is not None:
+        if self.hpo_kwargs is not None and len(self.hpo_kwargs) > 0:
             logger.warning(f'Overriding default HPO config with {self.hpo_kwargs}')
             cfg['optimizer_config'].update(self.hpo_kwargs)
         hpo:BaseOptimizer = self.hpo(cfg, model, logger)
