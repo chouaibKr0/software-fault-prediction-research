@@ -1,0 +1,50 @@
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - WARNING - MLflow not installed, proceeding without MLflow tracking
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - ================================================================================
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - STARTING ML EXPERIMENT: sso_3a81ff3f_svm_ant-1.3_20250905_154349
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Dataset: ant-1.3
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Model: svm
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - HPO Method: sso
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Start Time: 2025-09-05 15:43:49.954046
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - ================================================================================
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Loading ant-1.3.csv dataset from data/PROMISE/interim
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Dataset loaded succesufully
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - 
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Handelling missing values: No missing values found
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Separating the features and target variable from the DataFrame
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Scaling numeric features using standard method
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Encoding Target
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - WARNING - Overriding default HPO config with {'max_iter': 2, 'n_salps': 5, 'strategy': 'levy_flights'}
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - --------------------------------------------------------------------------------
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Starting SSO
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f44a2d4f5c0>
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Max interations: 2, Number of salps: 5
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Strategy: levy_flights
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Transfomation function: baseline
+2025-09-05 15:43:49 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Iteration 1/2: current best: -inf
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 1: 0.8404761904761905 -New best
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 2: 0.8452380952380952 -New best
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 3: 0.8285714285714285
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 4: 0.8166666666666668
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 5: 0.6261904761904762
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Iteration 1/2: current best: 0.8452380952380952
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 1: 0.7238095238095237
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 2: 0.6238095238095238
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 3: 0.6261904761904761
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 4: 0.8119047619047619
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 5: 0.8428571428571429
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Iteration 2/2: current best: 0.8452380952380952
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 1: 0.8404761904761905
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 2: 0.7166666666666667
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 3: 0.6238095238095237
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 4: 0.6309523809523808
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Salp 5: 0.7761904761904761
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - --------------------------------------------------------------------------------
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Results saved to: experiments/sso_3a81ff3f_svm_ant-1.3_20250905_154349/results
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - --------------------------------------------------------------------------------
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - EXPERIMENT COMPLETED: sso_3a81ff3f_svm_ant-1.3_20250905_154349
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Duration: 1.03 seconds
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Best Score: 0.845238
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Best Params: {'C': 0.008629132190071852, 'kernel': 'linear', 'gamma': 11.56732719914597, 'degree': 4, 'coef0': 0.416145155592091}
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - Evaluation Metrics: {'roc_auc': np.float64(0.8452380952380952), 'average_precision': np.float64(0.5709700387331967), 'f1': np.float64(0.5374603174603173), 'balanced_accuracy': np.float64(0.7642857142857142), 'matthews_corrcoef': np.float64(0.45913618809551016), 'recall': np.float64(0.7), 'precision': np.float64(0.46833333333333327), 'neg_log_loss': np.float64(-0.370851324883955)}
+2025-09-05 15:43:50 - experiment_sso_3a81ff3f_svm_ant-1.3_20250905_154349 - INFO - ================================================================================
