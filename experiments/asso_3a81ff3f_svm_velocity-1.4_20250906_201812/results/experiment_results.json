@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_3a81ff3f_svm_velocity-1.4_20250906_201812",
+  "dataset_name": "velocity-1.4",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "3a81ff3f",
+  "start_time": "2025-09-06T20:18:12.819528",
+  "end_time": "2025-09-06T20:23:12.434754",
+  "optimization_time_seconds": 299.615226,
+  "best_params": {
+    "C": 17.604993025450646,
+    "kernel": "rbf",
+    "gamma": 0.1371283879226298,
+    "degree": 3,
+    "coef0": 0.5266902038727832
+  },
+  "best_score": 0.8774278416347382,
+  "evaluation_metrics": {
+    "roc_auc": 0.8774278416347382,
+    "average_precision": 0.9502173569540899,
+    "f1": 0.8773300266917424,
+    "balanced_accuracy": 0.6894252873563218,
+    "matthews_corrcoef": 0.4459057209981684,
+    "recall": 0.9255172413793102,
+    "precision": 0.839000626566416,
+    "neg_log_loss": -0.40569123191028733
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
