@@ -1,0 +1,38 @@
+# Model configuration
+model_type: "SVC"
+model_config:
+  class_weight: "balanced"  # Critical for imbalanced SFP datasets
+  probability: true         # Enable probability estimates for ROC-AUC
+
+
+# HPO search space - CONTINUOUS INTERVALS
+search_space:
+  # Regularization parameter (log-uniform distribution)
+  C: 
+    type: "log_uniform"
+    min_value: 1e-3      # 0.001
+    max_value: 1e3       # 1000
+  
+  # Kernel selection (categorical choice)
+  kernel: 
+    type: "categorical"
+    choices: ["linear", "rbf", "poly", "sigmoid"]
+  
+  # Gamma parameter (log-uniform distribution)
+  gamma:
+    type: "log_uniform"
+    min_value: 1e-5      # 0.00001
+    max_value: 1e2       # 100
+  
+  # Polynomial degree (uniform integer)
+  degree:
+    type: "int_uniform"
+    min_value: 2
+    max_value: 6
+  
+  # Coefficient for poly/sigmoid kernels (uniform)
+  coef0:
+    type: "uniform"
+    min_value: -1.0
+    max_value: 1.0
+
