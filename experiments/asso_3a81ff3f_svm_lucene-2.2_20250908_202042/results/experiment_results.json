@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_3a81ff3f_svm_lucene-2.2_20250908_202042",
+  "dataset_name": "lucene-2.2",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "3a81ff3f",
+  "start_time": "2025-09-08T20:20:43.148872",
+  "end_time": "2025-09-08T20:27:20.661096",
+  "optimization_time_seconds": 397.512224,
+  "best_params": {
+    "C": 0.06637482292265244,
+    "kernel": "rbf",
+    "gamma": 0.0029778442186406367,
+    "degree": 5,
+    "coef0": 0.4773750765858663
+  },
+  "best_score": 0.6588505747126436,
+  "evaluation_metrics": {
+    "roc_auc": 0.6588505747126436,
+    "average_precision": 0.7385288354155781,
+    "f1": 0.7365613289663923,
+    "balanced_accuracy": 0.5,
+    "matthews_corrcoef": 0.0,
+    "recall": 1.0,
+    "precision": 0.5830204081632653,
+    "neg_log_loss": -0.6856212055424298
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
