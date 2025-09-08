@@ -1,0 +1,209 @@
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - MLflow tracking enabled: mlruns
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - ================================================================================
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - STARTING ML EXPERIMENT: asso_3a81ff3f_svm_lucene-2.2_20250908_211358
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Dataset: lucene-2.2
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Model: svm
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - HPO Method: asso
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Start Time: 2025-09-08 21:13:59.042424
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - ================================================================================
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Loading lucene-2.2.csv dataset from data/PROMISE/interim
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Dataset loaded succesufully
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - 
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Handelling missing values: No missing values found
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Separating the features and target variable from the DataFrame
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Scaling numeric features using standard method
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Encoding Target
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - --------------------------------------------------------------------------------
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Starting SSO (ASSO baseline)
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f82057ba570>
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Max iterations: 40, Number of salps: 30
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Strategy: basic
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Transformation function: baseline
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Initialization: evaluating 30 salps
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 1: 0.4980811634998827 - New best
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 2: 0.6365564156697161 - New best
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 3: 0.6322378606615059
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 4: 0.6366737039643444 - New best
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 5: 0.6018484635233404
+2025-09-08 21:13:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 6: 0.6268871686605677
+2025-09-08 21:14:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 7: 0.6568074126202205 - New best
+2025-09-08 21:14:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 8: 0.6369270466807413
+2025-09-08 21:14:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 9: 0.6568074126202205
+2025-09-08 21:14:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 10: 0.6433145672061928
+2025-09-08 21:14:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 11: -inf
+2025-09-08 21:14:20 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 12: -inf
+2025-09-08 21:14:20 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 13: 0.6004081632653061
+2025-09-08 21:14:20 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 14: 0.595852685901947
+2025-09-08 21:14:20 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 15: 0.6564743138634765
+2025-09-08 21:14:20 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 16: 0.6520548909218861
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 17: 0.3424935491437955
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 18: 0.5907107670654469
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 19: 0.5618742669481586
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 20: 0.34212760966455547
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 21: 0.6551817968566738
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 22: 0.5992376260849168
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 23: 0.6097536945812807
+2025-09-08 21:14:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 24: 0.6519376026272579
+2025-09-08 21:14:22 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 25: 0.6070279146141215
+2025-09-08 21:14:22 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 26: 0.5866619751348816
+2025-09-08 21:14:22 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 27: 0.6568074126202205
+2025-09-08 21:14:22 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 28: 0.6002134646962234
+2025-09-08 21:14:23 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 29: 0.5937860661505983
+2025-09-08 21:14:23 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 30: 0.3682852451325358
+2025-09-08 21:14:23 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Iteration 1/40: current best: 0.6568074126202205
+2025-09-08 21:14:23 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 1: 0.548569082805536
+2025-09-08 21:14:23 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 2: 0.6558128078817734
+2025-09-08 21:14:23 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 3: 0.5299483931503636
+2025-09-08 21:14:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 4: -inf
+2025-09-08 21:14:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 5: 0.5954022988505747
+2025-09-08 21:14:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 6: -inf
+2025-09-08 21:14:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 7: 0.6245085620455079
+2025-09-08 21:14:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 8: 0.6092282430213464
+2025-09-08 21:14:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 9: 0.6568074126202205
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 10: 0.6568074126202205
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 11: 0.6407178043631245
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 12: 0.6558128078817734
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 13: 0.6558128078817734
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 14: 0.5347923997185081
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 15: 0.6568074126202205
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 16: 0.6568074126202205
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 17: 0.6561341778090546
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 18: 0.633265306122449
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 19: 0.6503800140745953
+2025-09-08 21:14:44 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 20: 0.6243162092423177
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 21: 0.6415317851278443
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 22: 0.6227281257330519
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 23: 0.5999178981937604
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 24: 0.6362467745718977
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 25: 0.3382782078348581
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 26: 0.5907060755336617
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 27: 0.6431785127844242
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 28: 0.6281585737743373
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 29: 0.6552685901946986
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 30: 0.6369950738916257
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Iteration 2/40: current best: 0.6568074126202205
+2025-09-08 21:14:45 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 1: 0.5963030729533192
+2025-09-08 21:14:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 2: -inf
+2025-09-08 21:14:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 3: 0.6568074126202205
+2025-09-08 21:14:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 4: 0.6568074126202205
+2025-09-08 21:14:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 5: 0.33841426225662685
+2025-09-08 21:14:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 6: 0.6568074126202205
+2025-09-08 21:14:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 7: 0.6558128078817734
+2025-09-08 21:14:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 8: 0.6019892094768942
+2025-09-08 21:14:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 9: 0.6005606380483228
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 10: -inf
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 11: 0.6004597701149426
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 12: 0.6558128078817734
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 13: 0.6568074126202205
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 14: 0.6568074126202205
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 15: 0.6568074126202205
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 16: 0.6568074126202205
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 17: 0.6568074126202205
+2025-09-08 21:15:09 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 18: 0.6482547501759324
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 19: 0.647288294628196
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 20: 0.42160684963640627
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 21: 0.6464649307999062
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 22: 0.6354351395730706
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 23: 0.6096481351161154
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 24: 0.6328102275392915
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 25: 0.3756955195871452
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 26: 0.6456392212057237
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 27: 0.6330096176401596
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 28: 0.6217780905465635
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 29: 0.6034975369458129
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 30: 0.6113159746657283
+2025-09-08 21:15:10 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Iteration 3/40: current best: 0.6568074126202205
+2025-09-08 21:15:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 1: 0.6558128078817734
+2025-09-08 21:15:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 2: 0.6032324653999531
+2025-09-08 21:15:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 3: 0.5997818437719916
+2025-09-08 21:15:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 4: 0.6558128078817734
+2025-09-08 21:15:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 5: -inf
+2025-09-08 21:15:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 6: 0.6558128078817734
+2025-09-08 21:15:31 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 7: -inf
+2025-09-08 21:15:41 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 8: -inf
+2025-09-08 21:15:41 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 9: 0.6558128078817734
+2025-09-08 21:15:41 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 10: 0.6558128078817734
+2025-09-08 21:15:42 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 11: 0.6558128078817734
+2025-09-08 21:15:42 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 12: 0.6275838611306592
+2025-09-08 21:15:42 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 13: 0.6558128078817734
+2025-09-08 21:15:42 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 14: 0.6251301900070374
+2025-09-08 21:15:52 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 15: -inf
+2025-09-08 21:15:52 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 16: 0.6246211588083509
+2025-09-08 21:15:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 17: 0.6486910626319494
+2025-09-08 21:15:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 18: 0.653227773868168
+2025-09-08 21:15:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 19: 0.653115177105325
+2025-09-08 21:15:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 20: 0.6444428806005161
+2025-09-08 21:15:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 21: 0.6461459066385176
+2025-09-08 21:15:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 22: 0.598423645320197
+2025-09-08 21:15:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 23: 0.6365470326061459
+2025-09-08 21:15:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 24: 0.639500351864884
+2025-09-08 21:15:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 25: 0.5158949096880132
+2025-09-08 21:15:56 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 26: 0.5200258034248181
+2025-09-08 21:15:57 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 27: 0.6369950738916256
+2025-09-08 21:15:57 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 28: 0.6315458597231997
+2025-09-08 21:15:57 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 29: 0.6299038235984049
+2025-09-08 21:15:58 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 30: 0.6341566971616233
+2025-09-08 21:15:58 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Iteration 4/40: current best: 0.6568074126202205
+2025-09-08 21:15:58 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 1: 0.5960309641097818
+2025-09-08 21:15:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 2: 0.6568074126202205
+2025-09-08 21:15:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 3: 0.5519235280319024
+2025-09-08 21:15:59 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 4: 0.6558128078817734
+2025-09-08 21:16:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 5: 0.6568074126202205
+2025-09-08 21:16:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 6: 0.5957260145437486
+2025-09-08 21:16:00 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 7: 0.6561341778090546
+2025-09-08 21:16:01 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 8: 0.6049917898193761
+2025-09-08 21:16:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 9: -inf
+2025-09-08 21:16:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 10: 0.6407178043631245
+2025-09-08 21:16:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 11: 0.6568074126202205
+2025-09-08 21:16:11 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 12: 0.6568074126202205
+2025-09-08 21:16:21 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 13: -inf
+2025-09-08 21:16:22 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 14: 0.6053694581280789
+2025-09-08 21:16:32 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 15: -inf
+2025-09-08 21:16:32 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 16: 0.6255148956134178
+2025-09-08 21:16:32 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 17: 0.651609195402299
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 18: 0.6532230823363828
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 19: 0.6515740089139104
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 20: 0.6481304245836265
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 21: 0.6504034717335211
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 22: 0.6359371334740793
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 23: 0.6182336382828993
+2025-09-08 21:16:33 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 24: 0.6188294628196106
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 25: 0.5997302369223553
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 26: 0.5620806943467043
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 27: 0.6197466572836031
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 28: 0.6489068730940651
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 29: 0.6331034482758622
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 30: 0.634454609429979
+2025-09-08 21:16:34 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Iteration 5/40: current best: 0.6568074126202205
+2025-09-08 21:16:35 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 1: 0.6568074126202205
+2025-09-08 21:16:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 2: 0.6019821721792165
+2025-09-08 21:16:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 3: 0.5437414965986395
+2025-09-08 21:16:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 4: 0.3431925873797795
+2025-09-08 21:16:43 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 5: 0.5985667370396435
+2025-09-08 21:16:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 6: -inf
+2025-09-08 21:16:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 7: 0.6558128078817734
+2025-09-08 21:16:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 8: 0.608386113065916
+2025-09-08 21:16:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 9: 0.5961447337555711
+2025-09-08 21:16:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 10: 0.600806943467042
+2025-09-08 21:16:53 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 11: 0.5962983814215341
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 12: 0.6407178043631245
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 13: 0.6278864649308
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 14: 0.538224255219329
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 15: 0.6248017827820784
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 16: 0.603947923997185
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 17: 0.6337931034482759
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 18: 0.6492868871686606
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 19: 0.6543959652826649
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 20: 0.6543795449214167
+2025-09-08 21:16:54 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 21: 0.6527117053718039
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 22: 0.6496645554773635
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 23: 0.6344874501524748
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 24: 0.6314332629603566
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 25: 0.6094065212291814
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 26: 0.5956626788646493
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 27: 0.6024278676988036
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 28: 0.6427820783485808
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 29: 0.6516701853155056
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Salp 30: 0.6378137461881305
+2025-09-08 21:16:55 - experiment_asso_3a81ff3f_svm_lucene-2.2_20250908_211358 - INFO - Iteration 6/40: current best: 0.6568074126202205
