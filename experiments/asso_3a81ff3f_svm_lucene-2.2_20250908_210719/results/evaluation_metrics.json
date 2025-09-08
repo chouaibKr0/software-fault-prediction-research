@@ -1,0 +1,10 @@
+{
+  "roc_auc": 0.6588505747126436,
+  "average_precision": 0.7385288354155781,
+  "f1": 0.7365613289663923,
+  "balanced_accuracy": 0.5,
+  "matthews_corrcoef": 0.0,
+  "recall": 1.0,
+  "precision": 0.5830204081632653,
+  "neg_log_loss": -0.6856212055424298
+}
