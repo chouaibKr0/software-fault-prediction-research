@@ -142,7 +142,11 @@ class MLExperiment:
         import shutil
 
         # Copy entire project config directory
-        project_config_dir = get_project_root() / 'config'  # or wherever your project configs are
+        
+        project_config_dir = get_project_root().parent / 'config'
+        if not project_config_dir.exists():
+            self.logger.warning(f"Project config directory {project_config_dir} does not exist. Proceeding with default config.")
+            project_config_dir = get_project_root() / 'config'
         destination_config_dir = self.directories['configs']
 
         if project_config_dir.exists():

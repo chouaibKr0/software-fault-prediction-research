@@ -7,7 +7,7 @@ import yaml
 import numpy as np
 import json
 import random
-
+import logging
 
 def get_project_root() -> Path:
     """Get the root directory of the project."""
@@ -73,7 +73,7 @@ def setup_logging(log_level: str = "INFO", log_dir: str = "experiments/logs") ->
     logger.info(f"Logging initialized. Log file: {log_file}")
     return logger
 
-def load_config(config_relative_path: Union[str, Path]) -> Dict[str, Any]:
+def load_config(config_relative_path: Union[str, Path], logger: logging.Logger = None) -> Dict[str, Any]:
     """
     Load YAML configuration file from the project root, regardless of current working directory.
 
@@ -84,10 +84,15 @@ def load_config(config_relative_path: Union[str, Path]) -> Dict[str, Any]:
         Configuration dictionary.
     """
     project_root = get_project_root()  # This is a Path object
-    config_path = project_root / config_relative_path
-
+    
+    config_path = project_root.parent / config_relative_path
     if not config_path.exists():
-        raise FileNotFoundError(f"Config file not found: {config_path}")
+        logger.warning(f"Config file not found proceed with default config: {config_path}")
+
+        config_path = project_root / config_relative_path
+
+        if not config_path.exists():
+            raise FileNotFoundError(f"Config file not found: {config_path}")
 
     try:
         with open(config_path, 'r') as file:
@@ -125,7 +130,7 @@ def merge_configs(*config_paths: Union[str, Path]) -> Dict[str, Any]:
             
     return merged_config
 
-def load_base_config(base_config_path: str = None) -> Dict[str, Any]:
+def load_base_config(base_config_path: str = None, logger: logging.Logger = None) -> Dict[str, Any]:
     """
     Load the base configuration file.
     
@@ -134,10 +139,10 @@ def load_base_config(base_config_path: str = None) -> Dict[str, Any]:
     """
     if base_config_path == None:
         base_config_path= 'config/base_config.yaml'
-    return load_config(base_config_path)  # Adjust path as needed
+    return load_config(base_config_path, logger)  # Adjust path as needed
 
 
-def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
+def get_config_by_name(configuration_name: str, logger:logging.Logger) -> Dict[str, Any]:
     from .data.loader import DatasetLoader
     from .data.preprocessor import DataPreprocessor
     from .evaluation import cross_validation
@@ -191,12 +196,12 @@ def get_config_by_name(configuration_name: str) -> Dict[str, Any]:
         return None
     cls = get_class_by_name(config_name)
     if cls != None and cls().DEFAULT_CONFIG_PATH != None:
-     return load_config(cls().DEFAULT_CONFIG_PATH)
+     return load_config(cls().DEFAULT_CONFIG_PATH, logger=logger)
     elif config_name == 'basic' or config_name == 'base':
-        return load_base_config()
+        return load_base_config(logger=logger)
     elif config_name == 'cross_validation' or config_name == 'cv' or config_name == 'evaluation' or config_name == 'ev':
         if cross_validation.DEFAULT_CONFIG_PATH != None:
-            return load_config(cross_validation.DEFAULT_CONFIG_PATH)
+            return load_config(cross_validation.DEFAULT_CONFIG_PATH, logger=logger)
     else:
         raise ValueError(f"No configuration file found for '{configuration_name}'")
 
