@@ -87,7 +87,8 @@ def load_config(config_relative_path: Union[str, Path], logger: logging.Logger =
     
     config_path = project_root.parent / config_relative_path
     if not config_path.exists():
-        logger.warning(f"Config file not found proceed with default config: {config_path}")
+        if logger:
+            logger.warning(f"Config file not found proceed with default config: {config_path}")
 
         config_path = project_root / config_relative_path
 
@@ -142,7 +143,7 @@ def load_base_config(base_config_path: str = None, logger: logging.Logger = None
     return load_config(base_config_path, logger)  # Adjust path as needed
 
 
-def get_config_by_name(configuration_name: str, logger:logging.Logger) -> Dict[str, Any]:
+def get_config_by_name(configuration_name: str, logger:logging.Logger = None) -> Dict[str, Any]:
     from .data.loader import DatasetLoader
     from .data.preprocessor import DataPreprocessor
     from .evaluation import cross_validation
