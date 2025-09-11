@@ -1,0 +1,1 @@
+{'C': {'type': 'log_uniform', 'min_value': '1e-3', 'max_value': '1e3'}, 'kernel': {'type': 'categorical', 'choices': ['linear', 'rbf', 'poly', 'sigmoid']}, 'gamma': {'type': 'log_uniform', 'min_value': '1e-5', 'max_value': '1e2'}, 'degree': {'type': 'int_uniform', 'min_value': 2, 'max_value': 6}, 'coef0': {'type': 'uniform', 'min_value': -1.0, 'max_value': 1.0}}
