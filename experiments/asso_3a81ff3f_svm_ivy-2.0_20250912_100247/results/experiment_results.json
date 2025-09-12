@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_3a81ff3f_svm_ivy-2.0_20250912_100247",
+  "dataset_name": "ivy-2.0",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "3a81ff3f",
+  "start_time": "2025-09-12T10:02:47.855857",
+  "end_time": "2025-09-12T10:08:47.667666",
+  "optimization_time_seconds": 359.811809,
+  "best_params": {
+    "C": 0.012381143523567404,
+    "kernel": "linear",
+    "gamma": 0.00028992136153120363,
+    "degree": 4,
+    "coef0": -0.23290864488355079
+  },
+  "best_score": 0.8223310291858681,
+  "evaluation_metrics": {
+    "roc_auc": 0.8223310291858681,
+    "average_precision": 0.46490932804711954,
+    "f1": 0.3998353459406091,
+    "balanced_accuracy": 0.6919674859190987,
+    "matthews_corrcoef": 0.3160266870908863,
+    "recall": 0.525,
+    "precision": 0.32771111241699474,
+    "neg_log_loss": -0.30566227235524646
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
