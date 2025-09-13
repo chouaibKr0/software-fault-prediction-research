@@ -1,0 +1,315 @@
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - MLflow tracking enabled: mlruns
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - ================================================================================
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - STARTING ML EXPERIMENT: asso_3a81ff3f_svm_poi-3.0_20250913_224850
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Dataset: poi-3.0
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Model: svm
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - HPO Method: asso
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Start Time: 2025-09-13 22:48:51.109436
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - ================================================================================
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Loading poi-3.0.csv dataset from data/PROMISE/interim
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Dataset loaded succesufully
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - 
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Handelling missing values: No missing values found
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Separating the features and target variable from the DataFrame
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - WARNING - Feature selection: Disabled in config, proceed without feature selction
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Scaling numeric features using standard method
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Encoding Target
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - --------------------------------------------------------------------------------
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Starting SSO (ASSO baseline)
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Model: <src.models.svm.SVM_Wrapper object at 0x7f4e307df2f0>
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Max iterations: 40, Number of salps: 30
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Strategy: basic
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Transformation function: baseline
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Initialization: evaluating 30 salps
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.6882007041752107 - New best
+2025-09-13 22:48:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8198302040612896 - New best
+2025-09-13 22:48:52 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.8062518690191389
+2025-09-13 22:48:52 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.8068191608282069
+2025-09-13 22:48:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.8058289366883116
+2025-09-13 22:48:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.8157518262987014
+2025-09-13 22:48:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.8133893861073138
+2025-09-13 22:48:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8197000847288676
+2025-09-13 22:48:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.8132777789644567
+2025-09-13 22:48:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.8412523674242424 - New best
+2025-09-13 22:49:04 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: -inf
+2025-09-13 22:49:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: -inf
+2025-09-13 22:49:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.8509189344098884 - New best
+2025-09-13 22:49:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.7969941722203234
+2025-09-13 22:49:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.8121948158749145
+2025-09-13 22:49:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8120741306390977
+2025-09-13 22:49:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.1863286590054682
+2025-09-13 22:49:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.7126848548929141
+2025-09-13 22:49:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.713568989946457
+2025-09-13 22:49:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.18964198493392573
+2025-09-13 22:49:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8137222495158349
+2025-09-13 22:49:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.8396313938254727
+2025-09-13 22:49:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.8271948514752789
+2025-09-13 22:49:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.8133806640179996
+2025-09-13 22:49:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.826999405473912
+2025-09-13 22:49:21 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.7179001302973342
+2025-09-13 22:49:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.8132777789644567
+2025-09-13 22:49:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.7481890984563682
+2025-09-13 22:49:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.7606716542777399
+2025-09-13 22:49:23 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.2118916787707906
+2025-09-13 22:49:23 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 1/40: current best: 0.8509189344098884
+2025-09-13 22:49:33 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: -inf
+2025-09-13 22:49:33 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8121827117509683
+2025-09-13 22:49:33 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.696262406727045
+2025-09-13 22:49:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: -inf
+2025-09-13 22:49:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.8179494368022329
+2025-09-13 22:49:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: -inf
+2025-09-13 22:49:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.8049903701013899
+2025-09-13 22:49:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.7923373775347459
+2025-09-13 22:49:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.8128493285771246
+2025-09-13 22:49:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.8094688959614947
+2025-09-13 22:49:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.7358128097231715
+2025-09-13 22:49:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8121827117509683
+2025-09-13 22:49:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.8121827117509683
+2025-09-13 22:49:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.6972086644167236
+2025-09-13 22:49:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.6324891596889952
+2025-09-13 22:49:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8191381329744816
+2025-09-13 22:49:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.8097752370984279
+2025-09-13 22:49:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.7648125106801092
+2025-09-13 22:49:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.7771587171052632
+2025-09-13 22:49:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.7840751559295968
+2025-09-13 22:49:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8104484399920256
+2025-09-13 22:49:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.7855312108395989
+2025-09-13 22:49:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.8382491206709956
+2025-09-13 22:49:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.7945201248860788
+2025-09-13 22:49:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.1970078783606744
+2025-09-13 22:49:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.6982398289758487
+2025-09-13 22:49:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.8196171358794715
+2025-09-13 22:49:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.8274317719013444
+2025-09-13 22:49:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.8330260131863751
+2025-09-13 22:49:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8151500021360218
+2025-09-13 22:49:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 2/40: current best: 0.8509189344098884
+2025-09-13 22:50:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.826863946086808
+2025-09-13 22:50:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8192805344326726
+2025-09-13 22:50:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.8132811609990886
+2025-09-13 22:50:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.8391094034802917
+2025-09-13 22:50:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.18632385295625425
+2025-09-13 22:50:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.8180986023296878
+2025-09-13 22:50:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.8121827117509683
+2025-09-13 22:50:02 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.7966433306277056
+2025-09-13 22:50:02 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.8198321620813397
+2025-09-13 22:50:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: -inf
+2025-09-13 22:50:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8174900140977444
+2025-09-13 22:50:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8121827117509683
+2025-09-13 22:50:13 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.8332726347117794
+2025-09-13 22:50:13 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.7933378367794486
+2025-09-13 22:50:13 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.8132811609990886
+2025-09-13 22:50:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8133927681419457
+2025-09-13 22:50:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.8134061182786511
+2025-09-13 22:50:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.8108811624231033
+2025-09-13 22:50:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.810764215225564
+2025-09-13 22:50:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.5169335803998633
+2025-09-13 22:50:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8129093151913876
+2025-09-13 22:50:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.7873333012930053
+2025-09-13 22:50:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.8167436524550011
+2025-09-13 22:50:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.7513662529904306
+2025-09-13 22:50:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.2820648033435863
+2025-09-13 22:50:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.6793451134939621
+2025-09-13 22:50:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.8207381913590795
+2025-09-13 22:50:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.8219614198849395
+2025-09-13 22:50:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.84282056348257
+2025-09-13 22:50:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8294266383287765
+2025-09-13 22:50:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 3/40: current best: 0.8509189344098884
+2025-09-13 22:50:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.8121827117509683
+2025-09-13 22:50:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8183997814137618
+2025-09-13 22:50:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.8132777789644567
+2025-09-13 22:50:18 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.8121827117509683
+2025-09-13 22:50:28 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: -inf
+2025-09-13 22:50:28 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.8121827117509683
+2025-09-13 22:50:38 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: -inf
+2025-09-13 22:50:48 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: -inf
+2025-09-13 22:50:48 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.8121827117509683
+2025-09-13 22:50:49 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.8121827117509683
+2025-09-13 22:50:49 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8121827117509683
+2025-09-13 22:50:49 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8142619510423786
+2025-09-13 22:50:50 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.8121827117509683
+2025-09-13 22:50:50 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.8053184274606972
+2025-09-13 22:51:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: -inf
+2025-09-13 22:51:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8130672028081566
+2025-09-13 22:51:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.810383469326726
+2025-09-13 22:51:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.8082339193153338
+2025-09-13 22:51:02 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.8130073941957165
+2025-09-13 22:51:02 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.8193268149065848
+2025-09-13 22:51:02 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8126686567270449
+2025-09-13 22:51:03 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.7163559644850762
+2025-09-13 22:51:03 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.7415311182786513
+2025-09-13 22:51:03 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.7431213865629983
+2025-09-13 22:51:04 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.5133488016917294
+2025-09-13 22:51:04 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.47636714299954425
+2025-09-13 22:51:04 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.7866990807985873
+2025-09-13 22:51:05 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.8225929703520164
+2025-09-13 22:51:05 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.8272660522043745
+2025-09-13 22:51:05 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8234075066928686
+2025-09-13 22:51:05 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 4/40: current best: 0.8509189344098884
+2025-09-13 22:51:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: -inf
+2025-09-13 22:51:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8132811609990886
+2025-09-13 22:51:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.6999940369389381
+2025-09-13 22:51:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.8121827117509683
+2025-09-13 22:51:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.7979441679482798
+2025-09-13 22:51:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.8186347438197767
+2025-09-13 22:51:18 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.8054300346035543
+2025-09-13 22:51:18 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8117891497208932
+2025-09-13 22:51:28 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: -inf
+2025-09-13 22:51:28 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.6563928464627476
+2025-09-13 22:51:29 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.6802045062941445
+2025-09-13 22:51:29 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8132777789644567
+2025-09-13 22:51:39 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: -inf
+2025-09-13 22:51:40 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.8128852849453179
+2025-09-13 22:51:50 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: -inf
+2025-09-13 22:51:50 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8426546657837776
+2025-09-13 22:51:50 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.7973854202267031
+2025-09-13 22:51:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.8137375576725905
+2025-09-13 22:51:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.8128671287593985
+2025-09-13 22:51:51 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.8171562606801095
+2025-09-13 22:51:52 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8139132454716336
+2025-09-13 22:51:52 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.8159591984221919
+2025-09-13 22:51:52 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.7471671899920256
+2025-09-13 22:51:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.7578150810264297
+2025-09-13 22:51:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.6786185100535429
+2025-09-13 22:51:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.5969539438083846
+2025-09-13 22:51:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.696000744047619
+2025-09-13 22:51:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.8154170048701299
+2025-09-13 22:51:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.8261779270619731
+2025-09-13 22:51:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8246207671166552
+2025-09-13 22:51:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 5/40: current best: 0.8509189344098884
+2025-09-13 22:51:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.8230009505297335
+2025-09-13 22:51:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8058424648268397
+2025-09-13 22:51:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.7933418418204601
+2025-09-13 22:51:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.2282863586523126
+2025-09-13 22:51:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.8199378951640466
+2025-09-13 22:52:08 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: -inf
+2025-09-13 22:52:08 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.8121827117509683
+2025-09-13 22:52:08 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8260924861870584
+2025-09-13 22:52:09 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.7869366242310321
+2025-09-13 22:52:09 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.8164271652141718
+2025-09-13 22:52:10 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8261953712406015
+2025-09-13 22:52:10 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8224555529448621
+2025-09-13 22:52:11 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.6966595287935748
+2025-09-13 22:52:11 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.7923373775347459
+2025-09-13 22:52:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.8054280765835042
+2025-09-13 22:52:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.6937632611357939
+2025-09-13 22:52:13 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.6765629450045567
+2025-09-13 22:52:13 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.6703711516005925
+2025-09-13 22:52:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.8202362262189565
+2025-09-13 22:52:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.8207223491968557
+2025-09-13 22:52:14 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8169291303542948
+2025-09-13 22:52:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.8124561225506948
+2025-09-13 22:52:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.8091846270505808
+2025-09-13 22:52:15 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.756765226275917
+2025-09-13 22:52:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.7328079609535202
+2025-09-13 22:52:16 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.6727554860161769
+2025-09-13 22:52:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.682842849310777
+2025-09-13 22:52:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.796837174612668
+2025-09-13 22:52:17 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.8136457087320574
+2025-09-13 22:52:18 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8235176898211438
+2025-09-13 22:52:18 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 6/40: current best: 0.8509189344098884
+2025-09-13 22:52:20 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.8015782531613123
+2025-09-13 22:52:20 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.696262406727045
+2025-09-13 22:52:30 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: -inf
+2025-09-13 22:52:30 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.8179364426691729
+2025-09-13 22:52:31 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.812524831254272
+2025-09-13 22:52:31 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.8121827117509683
+2025-09-13 22:52:41 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: -inf
+2025-09-13 22:52:42 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8053769900603781
+2025-09-13 22:52:42 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.7923373775347459
+2025-09-13 22:52:42 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.8121827117509683
+2025-09-13 22:52:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8174820040157211
+2025-09-13 22:52:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8132811609990886
+2025-09-13 22:52:53 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: -inf
+2025-09-13 22:52:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.5811368798416495
+2025-09-13 22:52:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.8121827117509683
+2025-09-13 22:52:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8128580506664388
+2025-09-13 22:52:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.8157137339086352
+2025-09-13 22:52:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.8056833311973115
+2025-09-13 22:52:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.8097049263784462
+2025-09-13 22:52:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.8188862603953065
+2025-09-13 22:52:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8197321250569605
+2025-09-13 22:52:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.81972233495671
+2025-09-13 22:52:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.8164517294657097
+2025-09-13 22:52:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.8054335946400091
+2025-09-13 22:52:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.7536644345238095
+2025-09-13 22:52:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.7216807110104807
+2025-09-13 22:52:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.7049455136420597
+2025-09-13 22:52:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.7634499067270448
+2025-09-13 22:52:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.8105071805935292
+2025-09-13 22:53:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8149410279961267
+2025-09-13 22:53:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 7/40: current best: 0.8509189344098884
+2025-09-13 22:53:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.8121827117509683
+2025-09-13 22:53:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: 0.8137242075358853
+2025-09-13 22:53:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.7861722844041923
+2025-09-13 22:53:11 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: -inf
+2025-09-13 22:53:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.8121827117509683
+2025-09-13 22:53:12 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.8244221170824788
+2025-09-13 22:53:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: -inf
+2025-09-13 22:53:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8121827117509683
+2025-09-13 22:53:23 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.793905929596719
+2025-09-13 22:53:33 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: -inf
+2025-09-13 22:53:33 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8121827117509683
+2025-09-13 22:53:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: -inf
+2025-09-13 22:53:44 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.8132811609990886
+2025-09-13 22:53:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: -inf
+2025-09-13 22:53:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.8256483716393255
+2025-09-13 22:53:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8066290548815221
+2025-09-13 22:53:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.8133158713545227
+2025-09-13 22:53:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.8126405324390522
+2025-09-13 22:53:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.8168791118421053
+2025-09-13 22:53:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.8140405167748916
+2025-09-13 22:53:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8147117616484394
+2025-09-13 22:53:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.8182826562143998
+2025-09-13 22:53:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.819555369246981
+2025-09-13 22:53:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.8127651337149693
+2025-09-13 22:53:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.797446118848257
+2025-09-13 22:53:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.7478334508145363
+2025-09-13 22:53:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.7298988771645021
+2025-09-13 22:53:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.7510520797732969
+2025-09-13 22:54:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.7872001559295967
+2025-09-13 22:54:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.8124676926691728
+2025-09-13 22:54:00 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 8/40: current best: 0.8509189344098884
+2025-09-13 22:54:01 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.7997375363123718
+2025-09-13 22:54:11 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: -inf
+2025-09-13 22:54:21 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: -inf
+2025-09-13 22:54:21 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.793905929596719
+2025-09-13 22:54:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.8121827117509683
+2025-09-13 22:54:22 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.793905929596719
+2025-09-13 22:54:23 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.7296122942298929
+2025-09-13 22:54:23 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8054300346035543
+2025-09-13 22:54:24 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.8137252755468216
+2025-09-13 22:54:34 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: -inf
+2025-09-13 22:54:34 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8133893861073138
+2025-09-13 22:54:35 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.8250962099851902
+2025-09-13 22:54:35 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.7029554532638415
+2025-09-13 22:54:35 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 14: 0.8121827117509683
+2025-09-13 22:54:37 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 15: 0.8034761085953519
+2025-09-13 22:54:38 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 16: 0.8045845259455456
+2025-09-13 22:54:38 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 17: 0.8420651237468672
+2025-09-13 22:54:39 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 18: 0.8243094419286852
+2025-09-13 22:54:39 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 19: 0.8213104672191843
+2025-09-13 22:54:39 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 20: 0.8073556583219412
+2025-09-13 22:54:40 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 21: 0.8086422554966963
+2025-09-13 22:54:40 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 22: 0.8153915506094783
+2025-09-13 22:54:41 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 23: 0.8142647990715425
+2025-09-13 22:54:41 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 24: 0.8203458753417635
+2025-09-13 22:54:41 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 25: 0.8116686424868991
+2025-09-13 22:54:42 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 26: 0.7929312806163133
+2025-09-13 22:54:42 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 27: 0.7517938133686488
+2025-09-13 22:54:42 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 28: 0.7515704210811119
+2025-09-13 22:54:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 29: 0.7726285707165641
+2025-09-13 22:54:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 30: 0.7987880745898839
+2025-09-13 22:54:43 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Iteration 9/40: current best: 0.8509189344098884
+2025-09-13 22:54:44 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 1: 0.8121827117509683
+2025-09-13 22:54:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 2: -inf
+2025-09-13 22:54:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 3: 0.6923598947653224
+2025-09-13 22:54:54 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 4: 0.6958827288391433
+2025-09-13 22:54:55 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 5: 0.8003827929197994
+2025-09-13 22:54:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 6: 0.7983258928571428
+2025-09-13 22:54:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 7: 0.18678185164616085
+2025-09-13 22:54:56 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 8: 0.8132777789644567
+2025-09-13 22:54:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 9: 0.8121827117509683
+2025-09-13 22:54:57 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 10: 0.6972086644167236
+2025-09-13 22:54:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 11: 0.8121827117509683
+2025-09-13 22:54:58 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 12: 0.7923373775347459
+2025-09-13 22:54:59 - experiment_asso_3a81ff3f_svm_poi-3.0_20250913_224850 - INFO - Salp 13: 0.8112804205115062
