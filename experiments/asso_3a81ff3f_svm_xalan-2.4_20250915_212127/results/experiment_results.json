@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_3a81ff3f_svm_xalan-2.4_20250915_212127",
+  "dataset_name": "xalan-2.4",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "3a81ff3f",
+  "start_time": "2025-09-15T21:21:28.192850",
+  "end_time": "2025-09-15T21:33:32.877609",
+  "optimization_time_seconds": 724.684759,
+  "best_params": {
+    "C": 0.012166002532250428,
+    "kernel": "linear",
+    "gamma": 0.027580245062453986,
+    "degree": 5,
+    "coef0": 0.28496835353404204
+  },
+  "best_score": 0.7942120121648311,
+  "evaluation_metrics": {
+    "roc_auc": 0.7942120121648311,
+    "average_precision": 0.4345823914137643,
+    "f1": 0.4391920163014308,
+    "balanced_accuracy": 0.7055056765172719,
+    "matthews_corrcoef": 0.3319173713992135,
+    "recall": 0.6181818181818182,
+    "precision": 0.3462795142871044,
+    "neg_log_loss": -0.3646579249031011
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
