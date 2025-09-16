@@ -1,0 +1,5 @@
+optimizer_config:
+  strategy: "basic" # Options: basic, levy_flights, hybrid
+  transformation_function: "baseline" # Options: 1."baseline", 2."smooth_bounded", 3."probabilistic", 4."deterministic_probabilistic", 5."symmetric_bounded", 6."differentiable", 7."floor", 8."modulo", 9."gaussian", 10."lerp",
+  n_salps: 30
+  max_iter: 40
