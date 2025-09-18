@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_3a81ff3f_svm_jedit-4.3_20250918_141132",
+  "dataset_name": "jedit-4.3",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "3a81ff3f",
+  "start_time": "2025-09-18T14:11:33.013231",
+  "end_time": "2025-09-18T14:19:49.524986",
+  "optimization_time_seconds": 496.511755,
+  "best_params": {
+    "C": 0.19790807216665038,
+    "kernel": "rbf",
+    "gamma": 4.896588157583978,
+    "degree": 3,
+    "coef0": -0.2647382610948693
+  },
+  "best_score": 0.827435924971363,
+  "evaluation_metrics": {
+    "roc_auc": 0.827435924971363,
+    "average_precision": 0.29870210815897325,
+    "f1": 0.33714285714285713,
+    "balanced_accuracy": 0.6729596219931271,
+    "matthews_corrcoef": 0.3224314403231438,
+    "recall": 0.36666666666666664,
+    "precision": 0.31666666666666665,
+    "neg_log_loss": -0.09554264166157114
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
