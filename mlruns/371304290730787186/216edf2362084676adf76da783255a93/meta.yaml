@@ -1,0 +1,14 @@
+artifact_uri: /home/chouaib/ml-run/rxu001/mlruns/371304290730787186/216edf2362084676adf76da783255a93/artifacts
+end_time: 1758567800113
+entry_point_name: ''
+experiment_id: '371304290730787186'
+lifecycle_stage: active
+run_id: 216edf2362084676adf76da783255a93
+run_name: asso_3a81ff3f_svm_xalan-2.6_20250922_194647
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758566807679
+status: 3
+tags: []
+user_id: chouaib
