@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_ca49f6f4_svm_log4j-1.0_20251005_122701",
+  "dataset_name": "log4j-1.0",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "ca49f6f4",
+  "start_time": "2025-10-05T12:27:01.657609",
+  "end_time": "2025-10-05T12:29:41.376669",
+  "optimization_time_seconds": 159.71906,
+  "best_params": {
+    "C": 0.00392351308540845,
+    "kernel": "poly",
+    "gamma": 0.15137794804757312,
+    "degree": 3,
+    "coef0": -0.22510677329763623
+  },
+  "best_score": 0.8784126984126985,
+  "evaluation_metrics": {
+    "roc_auc": 0.8784126984126985,
+    "average_precision": 0.7806391791166226,
+    "f1": 0.36492063492063487,
+    "balanced_accuracy": 0.6116666666666667,
+    "matthews_corrcoef": 0.39665344399060853,
+    "recall": 0.2333333333333333,
+    "precision": 0.9333333333333333,
+    "neg_log_loss": -0.4772874758974222
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
