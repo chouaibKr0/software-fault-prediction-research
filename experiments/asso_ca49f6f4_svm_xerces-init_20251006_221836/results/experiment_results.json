@@ -1,0 +1,37 @@
+{
+  "experiment_id": "asso_ca49f6f4_svm_xerces-init_20251006_221836",
+  "dataset_name": "xerces-init",
+  "model_name": "svm",
+  "hpo_name": "asso",
+  "hpo_config_hash": "ca49f6f4",
+  "start_time": "2025-10-06T22:18:37.189791",
+  "end_time": "2025-10-06T22:25:04.174899",
+  "optimization_time_seconds": 386.985108,
+  "best_params": {
+    "C": 3.9926597926117937,
+    "kernel": "rbf",
+    "gamma": 0.0561900414320921,
+    "degree": 5,
+    "coef0": -0.7234622312905095
+  },
+  "best_score": 0.8043627450980392,
+  "evaluation_metrics": {
+    "roc_auc": 0.8043627450980392,
+    "average_precision": 0.8076219864186924,
+    "f1": 0.7123055028462998,
+    "balanced_accuracy": 0.7170588235294117,
+    "matthews_corrcoef": 0.4366713309897438,
+    "recall": 0.74,
+    "precision": 0.6907011590061126,
+    "neg_log_loss": -0.5568969928736724
+  },
+  "config": {
+    "project_name": "Software Fault Prediction",
+    "project_description": "A research project focused on hyperparameter optimization of machine learning models using metaheuristics.",
+    "random_seed": 42,
+    "random_state": 42,
+    "data_path": "data",
+    "use_mlflow": true,
+    "n_jobs": 1
+  }
+}
