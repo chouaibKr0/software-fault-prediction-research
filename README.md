@@ -200,8 +200,8 @@ Leverage **population-based metaheuristics** to make defect identification **acc
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/chouaibKr0/rxu001.git
-cd rxu001
+git clone https://github.com/chouaibKr0/software-fault-prediction-research.git
+cd software-fault-prediction-research
 
 # Install dependencies
 pip install -r requirements.txt
@@ -479,6 +479,7 @@ python -c "from src.data.loader import DatasetLoader; DatasetLoader().load_datas
 <p align="center">
   <strong>Made with 💻 and ❤️ by the rxu001 team</strong>
 </p>
+
 
 
 
