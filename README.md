@@ -59,7 +59,7 @@
 
 
 
-## 📖 Overview
+##  Overview
 
 
 This project is the result of months of dedicated research and development as part of our **graduation project**.  
@@ -77,7 +77,7 @@ It delivers an **automated software fault prediction system** that:
 
 
 
-**🎯 Main Goal:**  
+** Main Goal:**  
 
 
 Leverage **population-based metaheuristics** to make defect identification **accurate, more robust, and effective** in real-world software engineering.
@@ -92,7 +92,7 @@ Leverage **population-based metaheuristics** to make defect identification **acc
 
 
 
-## 👥 Contributors
+##  Contributors
 
 
 - **Karbala Chouaib**  
@@ -116,49 +116,19 @@ Leverage **population-based metaheuristics** to make defect identification **acc
 
 
 
-## 📌 Table of Contents
+##  Table of Contents
 
-1. [🛠 Tech Stack](#-tech-stack)
-2. [📥 Installation](#-installation)
-3. [🚀 Usage](#-usage)
-4. [⚙️ Configuration Guide](#️-configuration-guide)
-5. [📂 Project Architecture](#-project-architecture)
-6. [📊 Supported Datasets](#-supported-datasets)
-7. [📊 Experiment Management](#-experiment-management)
-8. [💻 Advanced Usage](#-advanced-usage)
-9. [📈 Performance & Benchmarks](#-performance--benchmarks)
-10. [🔧 Troubleshooting](#-troubleshooting)
-11. [📬 Contact](#-contact)  
-
-
-
-
-
----
-
-
-
-
-
-## ✨ Features
-
-
-- 🔍 **SSA Optimization** — Robust evolutionary hyperparameter search for SVM.  
-
-
-- 📈 **SVM Modeling** — High-performance, tunable classification models.  
-
-
-- 🛠 **Flexible Configurations** — Modular configs for datasets, models, and HPO strategies.  
-
-
-- 📊 **Evaluation Tools** — Cross-validation & mean scoring.  
-
-
-- 🌍 **Dataset Agnostic** — Works with 40+ datasets.  
-
-
-- 📦 **Extensible** — Add new datasets, models, or optimization methods easily.  
+1. [ Tech Stack](#-tech-stack)
+2. [ Installation](#-installation)
+3. [ Usage](#-usage)
+4. [ Configuration Guide](#️-configuration-guide)
+5. [ Project Architecture](#-project-architecture)
+6. [ Supported Datasets](#-supported-datasets)
+7. [ Experiment Management](#-experiment-management)
+8. [ Advanced Usage](#-advanced-usage)
+9. [ Performance & Benchmarks](#-performance--benchmarks)
+10. [ Troubleshooting](#-troubleshooting)
+11. [ Contact](#-contact)  
 
 
 
@@ -170,7 +140,37 @@ Leverage **population-based metaheuristics** to make defect identification **acc
 
 
 
-## 🛠 Tech Stack
+##  Features
+
+
+-  **SSA Optimization** — Robust evolutionary hyperparameter search for SVM.  
+
+
+-  **SVM Modeling** — High-performance, tunable classification models.  
+
+
+-  **Flexible Configurations** — Modular configs for datasets, models, and HPO strategies.  
+
+
+-  **Evaluation Tools** — Cross-validation & mean scoring.  
+
+
+-  **Dataset Agnostic** — Works with 40+ datasets.  
+
+
+-  **Extensible** — Add new datasets, models, or optimization methods easily.  
+
+
+
+
+
+---
+
+
+
+
+
+##  Tech Stack
 
 - **Language:** Python 3.8+
 - **Core Libraries:**  
@@ -190,7 +190,7 @@ Leverage **population-based metaheuristics** to make defect identification **acc
 
 
 
-## 📥 Installation
+##  Installation
 
 ### Prerequisites
 - **Python 3.8+** (tested on 3.11)
@@ -210,7 +210,7 @@ pip install -r requirements.txt
 python main.py --help
 ```
 
-### 🚀 Quick Start
+###  Quick Start
 ```bash
 # Run your first experiment
 python main.py --dataset ant-1.3 --model svm hpo sso
@@ -221,7 +221,7 @@ ls experiments/
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 **Run a fault prediction experiment:** 
 
@@ -273,7 +273,7 @@ python main.py --dataset ant-1.3 --model svm hpo sso --help
 
 ---
 
-## ⚙️ Configuration Guide
+##  Configuration Guide
 
 ### Available Configurations
 
@@ -304,7 +304,7 @@ python main.py --dataset ant-1.3 --model svm hpo asso --max_iter 100 --n_salps 4
 ```
 ---
 
-## 📂 Project Architecture
+##  Project Architecture
 
 ```
 rxu001/
@@ -348,7 +348,7 @@ rxu001/
 
 ---
 
-## 📊 Supported Datasets
+##  Supported Datasets
 
 ### PROMISE Software Engineering Repository
 This project works with **40+ software defect datasets** from the PROMISE repository:
@@ -361,7 +361,7 @@ This project works with **40+ software defect datasets** from the PROMISE reposi
 
 ---
 
-## 📊 Experiment Management
+##  Experiment Management
 
 ### Automatic Result Tracking
 Each experiment creates a timestamped directory in `experiments/`:
@@ -393,7 +393,7 @@ mlflow ui
 
 ---
 
-## 💻 Advanced Usage
+##  Advanced Usage
 
 ### Programmatic Interface
 ```python
@@ -422,7 +422,7 @@ df = loader.load_dataset("your-dataset.csv")
 
 ---
 
-## 📈 Performance & Benchmarks
+##  Performance & Benchmarks
 
 ### Optimization Results
 - **SSA typically converges** in 50-200 iterations
@@ -436,7 +436,7 @@ df = loader.load_dataset("your-dataset.csv")
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -479,6 +479,7 @@ python -c "from src.data.loader import DatasetLoader; DatasetLoader().load_datas
 <p align="center">
   <strong>Made with 💻 and ❤️ by the rxu001 team</strong>
 </p>
+
 
 
 
